@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>661000782498-v0qgluued4ldvqhu7v74ivblkrur9gp8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.661000782498-v0qgluued4ldvqhu7v74ivblkrur9gp8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB8YTj2wP_0vHgnu6mPprcWFTCvInLZ40Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>661000782498</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.devsquad.vade</string>
+	<key>PROJECT_ID</key>
+	<string>devsquad-vade</string>
+	<key>STORAGE_BUCKET</key>
+	<string>devsquad-vade.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:661000782498:ios:6b77400e8a050e85edcdfb</string>
+	<key>DATABASE_URL</key>
+	<string>https://devsquad-vade.firebaseio.com</string>
+</dict>
+</plist>
