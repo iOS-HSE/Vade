@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2819579AD6459ABF1CDAEB87 /* Pods_Vade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48EB97A844021E23046DB5C /* Pods_Vade.framework */; };
 		4159B92A252876190028D4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B929252876190028D4BB /* AppDelegate.swift */; };
 		4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B92B252876190028D4BB /* SceneDelegate.swift */; };
 		4159B92E252876190028D4BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B92D252876190028D4BB /* ViewController.swift */; };
@@ -15,6 +16,15 @@
 		4159B9362528761A0028D4BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4159B9342528761A0028D4BB /* LaunchScreen.storyboard */; };
 		4159B9412528761B0028D4BB /* VadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B9402528761B0028D4BB /* VadeTests.swift */; };
 		4159B94C2528761B0028D4BB /* VadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B94B2528761B0028D4BB /* VadeUITests.swift */; };
+		4159B97025287D130028D4BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B96F25287D130028D4BB /* LoginViewController.swift */; };
+		4159B97525287D280028D4BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B97425287D280028D4BB /* HomeViewController.swift */; };
+		4159B97A25287D3C0028D4BB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B97925287D3C0028D4BB /* SignUpViewController.swift */; };
+		4159B98025287E910028D4BB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B97F25287E910028D4BB /* Utilities.swift */; };
+		4159B985252897EE0028D4BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4159B984252897EE0028D4BB /* GoogleService-Info.plist */; };
+		4159B9B82529E0D90028D4BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B9B72529E0D90028D4BB /* Constants.swift */; };
+		4159B9E8252A3C8D0028D4BB /* data in Resources */ = {isa = PBXBuildFile; fileRef = 4159B9E7252A3C8D0028D4BB /* data */; };
+		B90BF2EA49FCDE0EC81C60EE /* Pods_Vade_VadeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84C49291F5ACD0BE18700AD /* Pods_Vade_VadeUITests.framework */; };
+		F8BDD5E56969D823ECB948CA /* Pods_VadeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C0DAE742028C010F9F2EB7 /* Pods_VadeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,22 @@
 		4159B9472528761B0028D4BB /* VadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4159B94B2528761B0028D4BB /* VadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VadeUITests.swift; sourceTree = "<group>"; };
 		4159B94D2528761B0028D4BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4159B96F25287D130028D4BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4159B97425287D280028D4BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4159B97925287D3C0028D4BB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4159B97F25287E910028D4BB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		4159B984252897EE0028D4BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4159B9B72529E0D90028D4BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4159B9E7252A3C8D0028D4BB /* data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data; sourceTree = SOURCE_ROOT; };
+		6BBB39769BC1ED450D089089 /* Pods-Vade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade.debug.xcconfig"; path = "Target Support Files/Pods-Vade/Pods-Vade.debug.xcconfig"; sourceTree = "<group>"; };
+		85DB99FA57D2509B955C0A78 /* Pods-Vade-VadeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade-VadeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A34C20E44599B1DD401E2BE4 /* Pods-Vade-VadeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade-VadeUITests.release.xcconfig"; path = "Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D3777C4B903908EA849E0B55 /* Pods-Vade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade.release.xcconfig"; path = "Target Support Files/Pods-Vade/Pods-Vade.release.xcconfig"; sourceTree = "<group>"; };
+		D6C0DAE742028C010F9F2EB7 /* Pods_VadeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VadeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D84C49291F5ACD0BE18700AD /* Pods_Vade_VadeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vade_VadeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E701A23402F2FC00B1326EA2 /* Pods-VadeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VadeTests.release.xcconfig"; path = "Target Support Files/Pods-VadeTests/Pods-VadeTests.release.xcconfig"; sourceTree = "<group>"; };
+		F48EB97A844021E23046DB5C /* Pods_Vade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F707D0921695E3C48D9BD8E0 /* Pods-VadeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VadeTests.debug.xcconfig"; path = "Target Support Files/Pods-VadeTests/Pods-VadeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2819579AD6459ABF1CDAEB87 /* Pods_Vade.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BDD5E56969D823ECB948CA /* Pods_VadeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +98,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90BF2EA49FCDE0EC81C60EE /* Pods_Vade_VadeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E70E078366E75E600662CB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BBB39769BC1ED450D089089 /* Pods-Vade.debug.xcconfig */,
+				D3777C4B903908EA849E0B55 /* Pods-Vade.release.xcconfig */,
+				85DB99FA57D2509B955C0A78 /* Pods-Vade-VadeUITests.debug.xcconfig */,
+				A34C20E44599B1DD401E2BE4 /* Pods-Vade-VadeUITests.release.xcconfig */,
+				F707D0921695E3C48D9BD8E0 /* Pods-VadeTests.debug.xcconfig */,
+				E701A23402F2FC00B1326EA2 /* Pods-VadeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4159B91D252876190028D4BB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,8 @@
 				4159B93F2528761B0028D4BB /* VadeTests */,
 				4159B94A2528761B0028D4BB /* VadeUITests */,
 				4159B927252876190028D4BB /* Products */,
+				0E70E078366E75E600662CB2 /* Pods */,
+				F2F7EC597759905939255222 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +143,16 @@
 		4159B928252876190028D4BB /* Vade */ = {
 			isa = PBXGroup;
 			children = (
+				4159B97E25287E750028D4BB /* Helpers */,
+				4159B95C252876FA0028D4BB /* View Controllers */,
 				4159B929252876190028D4BB /* AppDelegate.swift */,
 				4159B92B252876190028D4BB /* SceneDelegate.swift */,
-				4159B92D252876190028D4BB /* ViewController.swift */,
 				4159B92F252876190028D4BB /* Main.storyboard */,
 				4159B9322528761A0028D4BB /* Assets.xcassets */,
 				4159B9342528761A0028D4BB /* LaunchScreen.storyboard */,
+				4159B984252897EE0028D4BB /* GoogleService-Info.plist */,
 				4159B9372528761A0028D4BB /* Info.plist */,
+				4159B9E7252A3C8D0028D4BB /* data */,
 			);
 			path = Vade;
 			sourceTree = "<group>";
@@ -128,6 +175,36 @@
 			path = VadeUITests;
 			sourceTree = "<group>";
 		};
+		4159B95C252876FA0028D4BB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4159B92D252876190028D4BB /* ViewController.swift */,
+				4159B96F25287D130028D4BB /* LoginViewController.swift */,
+				4159B97425287D280028D4BB /* HomeViewController.swift */,
+				4159B97925287D3C0028D4BB /* SignUpViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4159B97E25287E750028D4BB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4159B97F25287E910028D4BB /* Utilities.swift */,
+				4159B9B72529E0D90028D4BB /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F2F7EC597759905939255222 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F48EB97A844021E23046DB5C /* Pods_Vade.framework */,
+				D84C49291F5ACD0BE18700AD /* Pods_Vade_VadeUITests.framework */,
+				D6C0DAE742028C010F9F2EB7 /* Pods_VadeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4159B9502528761B0028D4BB /* Build configuration list for PBXNativeTarget "Vade" */;
 			buildPhases = (
+				C4A0AE56F83CEA3975814637 /* [CP] Check Pods Manifest.lock */,
 				4159B922252876190028D4BB /* Sources */,
 				4159B923252876190028D4BB /* Frameworks */,
 				4159B924252876190028D4BB /* Resources */,
+				EEFB8715379C6FD38F32C0C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4159B9532528761B0028D4BB /* Build configuration list for PBXNativeTarget "VadeTests" */;
 			buildPhases = (
+				8107B8B60508D718DE753039 /* [CP] Check Pods Manifest.lock */,
 				4159B9382528761B0028D4BB /* Sources */,
 				4159B9392528761B0028D4BB /* Frameworks */,
 				4159B93A2528761B0028D4BB /* Resources */,
@@ -170,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4159B9562528761B0028D4BB /* Build configuration list for PBXNativeTarget "VadeUITests" */;
 			buildPhases = (
+				BD05C88DF0CBF98562D84BAC /* [CP] Check Pods Manifest.lock */,
 				4159B9432528761B0028D4BB /* Sources */,
 				4159B9442528761B0028D4BB /* Frameworks */,
 				4159B9452528761B0028D4BB /* Resources */,
+				4F3EB54FCF6A7FC8385547E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,8 +314,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4159B9362528761A0028D4BB /* LaunchScreen.storyboard in Resources */,
+				4159B985252897EE0028D4BB /* GoogleService-Info.plist in Resources */,
 				4159B9332528761A0028D4BB /* Assets.xcassets in Resources */,
 				4159B931252876190028D4BB /* Main.storyboard in Resources */,
+				4159B9E8252A3C8D0028D4BB /* data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +337,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F3EB54FCF6A7FC8385547E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8107B8B60508D718DE753039 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VadeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD05C88DF0CBF98562D84BAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vade-VadeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4A0AE56F83CEA3975814637 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vade-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEFB8715379C6FD38F32C0C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vade/Pods-Vade-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vade/Pods-Vade-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vade/Pods-Vade-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4159B922252876190028D4BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4159B97A25287D3C0028D4BB /* SignUpViewController.swift in Sources */,
+				4159B97525287D280028D4BB /* HomeViewController.swift in Sources */,
+				4159B98025287E910028D4BB /* Utilities.swift in Sources */,
+				4159B97025287D130028D4BB /* LoginViewController.swift in Sources */,
 				4159B92E252876190028D4BB /* ViewController.swift in Sources */,
 				4159B92A252876190028D4BB /* AppDelegate.swift in Sources */,
 				4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */,
+				4159B9B82529E0D90028D4BB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,10 +625,12 @@
 		};
 		4159B9512528761B0028D4BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BBB39769BC1ED450D089089 /* Pods-Vade.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49B53529R9;
 				INFOPLIST_FILE = Vade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,10 +645,12 @@
 		};
 		4159B9522528761B0028D4BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3777C4B903908EA849E0B55 /* Pods-Vade.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49B53529R9;
 				INFOPLIST_FILE = Vade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +665,7 @@
 		};
 		4159B9542528761B0028D4BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F707D0921695E3C48D9BD8E0 /* Pods-VadeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +687,7 @@
 		};
 		4159B9552528761B0028D4BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E701A23402F2FC00B1326EA2 /* Pods-VadeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +709,7 @@
 		};
 		4159B9572528761B0028D4BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85DB99FA57D2509B955C0A78 /* Pods-Vade-VadeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +729,7 @@
 		};
 		4159B9582528761B0028D4BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A34C20E44599B1DD401E2BE4 /* Pods-Vade-VadeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
