@@ -50,4 +50,17 @@ class Utilities
         
         return passText.evaluate(with: password)
     }
+    
+    static func getCurrentDateAndTime() -> String{
+        
+        let currentDateTime = Date()
+        
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+        formatter.dateStyle = .medium
+        
+        let dateTimeString = formatter.string(from: currentDateTime)
+        
+        return dateTimeString
+    }
 }

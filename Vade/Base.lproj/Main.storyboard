@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UGY-cn-dcz">
-                                <rect key="frame" x="40" y="702" width="334" height="120"/>
+                                <rect key="frame" x="40" y="632" width="334" height="190"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXT-bg-l5w">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -29,8 +29,18 @@
                                             <segue destination="SbW-CL-7fD" kind="show" id="ygO-TV-caj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-zZ-SrV">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYw-xp-KTr">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4eL-vr-8vW"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign In with Google"/>
+                                        <connections>
+                                            <action selector="signInGoogleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yVl-iK-3Fh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-zZ-SrV">
+                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7P0-Pv-BrP"/>
                                         </constraints>
@@ -57,6 +67,7 @@
                     <navigationItem key="navigationItem" id="dzH-6k-yny"/>
                     <connections>
                         <outlet property="loginButton" destination="P9i-zZ-SrV" id="EWy-GZ-AgJ"/>
+                        <outlet property="signInGoogleButton" destination="iYw-xp-KTr" id="4S2-43-VI3"/>
                         <outlet property="signUpButton" destination="WXT-bg-l5w" id="J81-cm-UNB"/>
                     </connections>
                 </viewController>

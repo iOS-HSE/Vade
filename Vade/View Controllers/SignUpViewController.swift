@@ -85,7 +85,11 @@ class SignUpViewController: UIViewController {
                 {
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["first_name":firstName, "last_name":lastName, "uid":result!.user.uid])
+                    db.collection("users").document(result!.user.uid).setData([
+                        "name": firstName + " " + lastName,
+                        "email": email,
+                        "last_visit": Utilities.getCurrentDateAndTime()
+                    ])
                     
                     self.transitionToHome()
                 }

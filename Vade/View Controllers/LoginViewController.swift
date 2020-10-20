@@ -51,6 +51,8 @@ class LoginViewController: UIViewController {
             }
             else
             {
+                Firestore.firestore().collection("users").document(result!.user.uid).setData(["last_visit": Utilities.getCurrentDateAndTime()], merge: true)
+                
                 let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
                 
                 self.view.window?.rootViewController = homeViewController
