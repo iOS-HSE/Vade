@@ -46,13 +46,14 @@ class Utilities
     
     static func isPasswordValid(_ password: String) -> Bool
     {
+        // validate password with specified rules
         let passText = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
-        
         return passText.evaluate(with: password)
     }
     
     static func getCurrentDateAndTime() -> String{
         
+        // get current date and time for field in database
         let currentDateTime = Date()
         
         let formatter = DateFormatter()

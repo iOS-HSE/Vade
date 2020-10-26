@@ -53,36 +53,31 @@ class SignUpViewController: UIViewController {
         
         // Check if the password is secure
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        if !Utilities.isPasswordValid(cleanedPassword)
-        {
+        if !Utilities.isPasswordValid(cleanedPassword) {
             return "Please make sure your password at least 8 chars, contains a special char and a number"
         }
         
         return nil
     }
     
-    @IBAction func signUpTapped(_ sender: Any)
-    {
+    @IBAction func signUpTapped(_ sender: Any) {
         let error = validateFields()
         
-        if error != nil
-        {
+        if error != nil {
             showError(error!)
         }
-        else
-        {
+        else {
+            // clean all fields from tabs or spaces
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-                if err != nil
-                {
+                if err != nil {
                     self.showError("Error creating user!")
                 }
-                else
-                {
+                else {
                     let db = Firestore.firestore()
                     
                     db.collection("users").document(result!.user.uid).setData([
@@ -103,8 +98,7 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
-    func transitionToHome()
-    {
+    func transitionToHome() {
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
         
         view.window?.rootViewController = homeViewController
