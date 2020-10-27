@@ -21,5 +21,7 @@ target 'Vade' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'GoogleSignIn'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
 
 end
