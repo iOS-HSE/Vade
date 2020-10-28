@@ -8,12 +8,15 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FacebookCore
+import FacebookLogin
 
 class ViewController: UIViewController, GIDSignInDelegate {
     
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signInGoogleButton: UIButton!
+    @IBOutlet weak var signInFacebookButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,30 @@ class ViewController: UIViewController, GIDSignInDelegate {
             return
         }
         
+        signIntoFirebaseWithGoogle(didSignInFor: user)
+    }
+    
+    @IBAction func signInGoogleTapped(_ sender: Any) {
+        // call google sign in form
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
+    @IBAction func signInFacebookTapped(_ sender: Any) {
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: [.publicProfile, .email], viewController: self) { (result) in
+            switch result {
+                case .success(granted: _, declined: _, token: _):
+                    self.signIntoFirebaseWithFacebook()
+                case .failed(let err):
+                    print(err)
+                case .cancelled:
+                    print("canceled")
+            }
+        }
+    }
+    
+    func signIntoFirebaseWithGoogle(didSignInFor user: GIDGoogleUser!) {
         // get auth data
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
@@ -40,8 +67,9 @@ class ViewController: UIViewController, GIDSignInDelegate {
         print("Email: \(user.profile.email)")
         
         // sign in with given credentials
-        Auth.auth().signIn(with: credential) { (result, error) in
-            if error != nil {
+        Auth.auth().signIn(with: credential) { (result, err) in
+            if err != nil {
+                print("Error: \(err?.localizedDescription)")
                 return
             }
             else {
@@ -60,12 +88,30 @@ class ViewController: UIViewController, GIDSignInDelegate {
         }
     }
     
-    @IBAction func signInGoogleTapped(_ sender: Any) {
-        // call google sign in form
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.signIn()
+    func signIntoFirebaseWithFacebook() {
+        // get auth data
+        let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+        print("Try to auth by facebook")
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if error != nil {
+                print(error?.localizedDescription as Any)
+                return
+            }
+            else {
+                // create user or update his last visit time
+                let db = Firestore.firestore()
+                
+                db.collection("users").document(authResult!.user.uid).setData([
+                    "name": authResult?.user.displayName,
+                    "email": authResult?.user.email,
+                    "last_visit": Utilities.getCurrentDateAndTime()
+                ])
+                
+                print("Successfully authentification!")
+                self.transitionToHome()
+            }
+        }
     }
-    
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // some actions when google signed in user disconnected
@@ -87,6 +133,7 @@ class ViewController: UIViewController, GIDSignInDelegate {
         // style buttons
         Utilities.styleFilledButton(signUpButton)
         Utilities.styleFilledButton(signInGoogleButton)
+        Utilities.styleFilledButton(signInFacebookButton)
         Utilities.styleHollowButton(loginButton)
     }
 }
