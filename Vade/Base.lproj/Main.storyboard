@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nLL-0t-39x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="64v-gh-gfX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--VADE-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Vade" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,7 +74,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UGY-cn-dcz" secondAttribute="bottom" constant="40" id="dDl-6w-qqJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dzH-6k-yny"/>
+                    <navigationItem key="navigationItem" title="VADE" id="dzH-6k-yny">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="MXP-2k-Xqa"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="loginButton" destination="P9i-zZ-SrV" id="EWy-GZ-AgJ"/>
                         <outlet property="signInFacebookButton" destination="Gey-xJ-Qir" id="RMl-UQ-HXD"/>
@@ -84,9 +86,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1960.8695652173915" y="116.51785714285714"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="hz5-wK-Bkg">
             <objects>
                 <viewController id="bQx-Vf-L1O" customClass="LoginViewController" customModule="Vade" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4nN-us-JW9">
-                                <rect key="frame" x="40" y="84" width="334" height="230.5"/>
+                                <rect key="frame" x="40" y="128" width="334" height="230.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIl-uo-vLl">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -144,7 +146,7 @@
                             <constraint firstItem="4nN-us-JW9" firstAttribute="top" secondItem="Yq0-Lx-tiy" secondAttribute="top" constant="40" id="pH1-zw-s2A"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XVc-Kt-wFE"/>
+                    <navigationItem key="navigationItem" title="Login" id="XVc-Kt-wFE"/>
                     <connections>
                         <outlet property="emailTextField" destination="mIl-uo-vLl" id="wTu-0l-q5D"/>
                         <outlet property="errorLabel" destination="brn-2e-tXH" id="R8M-hi-9oM"/>
@@ -155,9 +157,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ra3-r7-bAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="496"/>
+            <point key="canvasLocation" x="2713.04347826087" y="495.53571428571428"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Sign Up-->
         <scene sceneID="by7-oF-c5R">
             <objects>
                 <viewController id="SbW-CL-7fD" customClass="SignUpViewController" customModule="Vade" customModuleProvider="target" sceneMemberID="viewController">
@@ -166,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-R0-s7W">
-                                <rect key="frame" x="40" y="84" width="334" height="370.5"/>
+                                <rect key="frame" x="40" y="128" width="334" height="370.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJT-ql-flQ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -233,7 +235,7 @@
                             <constraint firstItem="dLZ-Ef-hiv" firstAttribute="trailing" secondItem="Lkd-R0-s7W" secondAttribute="trailing" constant="40" id="eE1-ia-7A6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="S4g-sA-rHJ"/>
+                    <navigationItem key="navigationItem" title="Sign Up" id="S4g-sA-rHJ"/>
                     <connections>
                         <outlet property="emailTextField" destination="gjQ-Gn-EDh" id="SnV-2R-X6B"/>
                         <outlet property="errorLabel" destination="1aS-0e-Cmf" id="Ajh-05-Aqe"/>
@@ -246,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uz2-wq-vEQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="-153"/>
+            <point key="canvasLocation" x="2713.04347826087" y="-153.34821428571428"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="D9c-rL-btK">
@@ -273,24 +275,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ih9-lE-k2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2643" y="117"/>
+            <point key="canvasLocation" x="3552.1739130434785" y="116.51785714285714"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Hdf-2P-SaU">
+        <scene sceneID="if6-UP-9ZR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nLL-0t-39x" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="64v-gh-gfX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3yL-qd-ekY">
+                    <navigationItem key="navigationItem" id="0bt-Sq-qMa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TQt-bc-eaR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jsN-Fz-XyD"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0ih-X6-Orh"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OZU-aH-411" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYQ-os-WXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1050.7246376811595" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
