@@ -105,7 +105,10 @@
                                             <constraint firstAttribute="height" constant="50" id="OnB-HN-wYd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bQx-Vf-L1O" id="utz-xJ-Lhe"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N5B-gS-VDd">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
@@ -113,7 +116,10 @@
                                             <constraint firstAttribute="height" constant="50" id="wg1-ul-faf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bQx-Vf-L1O" id="Gti-dj-ngX"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0B-ad-Jx3">
                                         <rect key="frame" x="0.0" y="140" width="334" height="50"/>
@@ -176,7 +182,10 @@
                                             <constraint firstAttribute="height" constant="50" id="sPE-tQ-fts"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="SbW-CL-7fD" id="ENH-dl-w76"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZvW-KE-jjy">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
@@ -184,7 +193,10 @@
                                             <constraint firstAttribute="height" constant="50" id="KQe-gx-Av8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="family-name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="SbW-CL-7fD" id="i5x-Hg-CbC"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjQ-Gn-EDh">
                                         <rect key="frame" x="0.0" y="140" width="334" height="50"/>
@@ -192,7 +204,10 @@
                                             <constraint firstAttribute="height" constant="50" id="oWR-0g-sEo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="SbW-CL-7fD" id="T3R-lk-AG2"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zH-n1-HMS">
                                         <rect key="frame" x="0.0" y="210" width="334" height="50"/>
@@ -200,7 +215,10 @@
                                             <constraint firstAttribute="height" constant="50" id="oNv-ox-QaW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="SbW-CL-7fD" id="r7P-56-Tpm"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nu-3O-9QA">
                                         <rect key="frame" x="0.0" y="280" width="334" height="50"/>
