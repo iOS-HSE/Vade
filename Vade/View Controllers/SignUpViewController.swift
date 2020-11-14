@@ -18,7 +18,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +36,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     func setUpElements()
     {
-        // hide error label
-        errorLabel.alpha = 0
-        
         Utilities.styleTextField(firstNameTextField)
         Utilities.styleTextField(lastNameTextField)
         Utilities.styleTextField(emailTextField)
@@ -70,7 +66,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         let error = validateFields()
         
         if error != nil {
-            showError(error!)
+            Alert.shared.setTitleAndMessage(title: "Sign Up failed", message: error!)
+            self.present(Alert.shared.getAlert(), animated: true, completion: nil)
         }
         else {
             // clean all fields from tabs or spaces
@@ -81,7 +78,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 if err != nil {
-                    self.showError("Error creating user!")
+                    Alert.shared.setTitleAndMessage(title: "Sign Up failed", message: err!.localizedDescription)
+                    self.present(Alert.shared.getAlert(), animated: true, completion: nil)
                 }
                 else {
                     let db = Firestore.firestore()
@@ -98,17 +96,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func showError(_ message:String)
-    {
-        errorLabel.text = message
-        errorLabel.alpha = 1
-    }
-    
     func transitionToHome() {
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
         
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
+        navigationController?.pushViewController(homeViewController!, animated: true)
+        
+        //view.window?.rootViewController = homeViewController
+        //view.window?.makeKeyAndVisible()
     }
 }
 

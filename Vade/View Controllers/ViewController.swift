@@ -60,11 +60,6 @@ class ViewController: UIViewController, GIDSignInDelegate {
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                         accessToken: authentication.accessToken)
         
-        // pring some user data to console
-        print("User prepeared")
-        print("User ID: \(user.userID)")
-        print("Name: \(user.profile.name)")
-        print("Email: \(user.profile.email)")
         
         // sign in with given credentials
         Auth.auth().signIn(with: credential) { (result, err) in

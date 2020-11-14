@@ -11,6 +11,16 @@ import UIKit
 
 class Utilities
 {
+    static func styleTextView(_ textView: UITextView) {
+        textView.backgroundColor = UIColor.systemOrange
+        textView.layer.cornerRadius = 25.0
+        textView.tintColor = UIColor.white
+    }
+    
+    @objc static func buttonPressed() {
+        print("Button pressed")
+    }
+    
     static func styleTextField(_ textField: UITextField)
     {
         // create the bottom line

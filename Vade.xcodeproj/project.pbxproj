@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2819579AD6459ABF1CDAEB87 /* Pods_Vade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48EB97A844021E23046DB5C /* Pods_Vade.framework */; };
+		412FB49B2559D542006726CC /* FirestoreUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FB49A2559D542006726CC /* FirestoreUser.swift */; };
+		412FB4A32559DB73006726CC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FB4A22559DB73006726CC /* Alert.swift */; };
 		4159B92A252876190028D4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B929252876190028D4BB /* AppDelegate.swift */; };
 		4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B92B252876190028D4BB /* SceneDelegate.swift */; };
 		4159B92E252876190028D4BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B92D252876190028D4BB /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 		4159B985252897EE0028D4BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4159B984252897EE0028D4BB /* GoogleService-Info.plist */; };
 		4159B9B82529E0D90028D4BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B9B72529E0D90028D4BB /* Constants.swift */; };
 		4159B9E8252A3C8D0028D4BB /* data in Resources */ = {isa = PBXBuildFile; fileRef = 4159B9E7252A3C8D0028D4BB /* data */; };
+		417632DF255F126100C0CBF3 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417632DE255F126100C0CBF3 /* DatePickerTableViewCell.swift */; };
+		417632E4255F139600C0CBF3 /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417632E3255F139600C0CBF3 /* PickerTableViewCell.swift */; };
 		B90BF2EA49FCDE0EC81C60EE /* Pods_Vade_VadeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84C49291F5ACD0BE18700AD /* Pods_Vade_VadeUITests.framework */; };
 		F8BDD5E56969D823ECB948CA /* Pods_VadeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C0DAE742028C010F9F2EB7 /* Pods_VadeTests.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		412FB49A2559D542006726CC /* FirestoreUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUser.swift; sourceTree = "<group>"; };
+		412FB4A22559DB73006726CC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4159B926252876190028D4BB /* Vade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4159B929252876190028D4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4159B92B252876190028D4BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,8 @@
 		4159B984252897EE0028D4BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4159B9B72529E0D90028D4BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4159B9E7252A3C8D0028D4BB /* data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data; sourceTree = SOURCE_ROOT; };
+		417632DE255F126100C0CBF3 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		417632E3255F139600C0CBF3 /* PickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
 		6BBB39769BC1ED450D089089 /* Pods-Vade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade.debug.xcconfig"; path = "Target Support Files/Pods-Vade/Pods-Vade.debug.xcconfig"; sourceTree = "<group>"; };
 		85DB99FA57D2509B955C0A78 /* Pods-Vade-VadeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade-VadeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A34C20E44599B1DD401E2BE4 /* Pods-Vade-VadeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade-VadeUITests.release.xcconfig"; path = "Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +126,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		412FB4962559D525006726CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				412FB49A2559D542006726CC /* FirestoreUser.swift */,
+				412FB4A22559DB73006726CC /* Alert.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4159B91D252876190028D4BB = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +160,7 @@
 		4159B928252876190028D4BB /* Vade */ = {
 			isa = PBXGroup;
 			children = (
+				412FB4962559D525006726CC /* Models */,
 				4159B97E25287E750028D4BB /* Helpers */,
 				4159B95C252876FA0028D4BB /* View Controllers */,
 				4159B929252876190028D4BB /* AppDelegate.swift */,
@@ -191,6 +209,8 @@
 			children = (
 				4159B97F25287E910028D4BB /* Utilities.swift */,
 				4159B9B72529E0D90028D4BB /* Constants.swift */,
+				417632DE255F126100C0CBF3 /* DatePickerTableViewCell.swift */,
+				417632E3255F139600C0CBF3 /* PickerTableViewCell.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -482,12 +502,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4159B97A25287D3C0028D4BB /* SignUpViewController.swift in Sources */,
+				417632E4255F139600C0CBF3 /* PickerTableViewCell.swift in Sources */,
+				412FB49B2559D542006726CC /* FirestoreUser.swift in Sources */,
 				4159B97525287D280028D4BB /* HomeViewController.swift in Sources */,
+				417632DF255F126100C0CBF3 /* DatePickerTableViewCell.swift in Sources */,
 				4159B98025287E910028D4BB /* Utilities.swift in Sources */,
 				4159B97025287D130028D4BB /* LoginViewController.swift in Sources */,
 				4159B92E252876190028D4BB /* ViewController.swift in Sources */,
 				4159B92A252876190028D4BB /* AppDelegate.swift in Sources */,
 				4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */,
+				412FB4A32559DB73006726CC /* Alert.swift in Sources */,
 				4159B9B82529E0D90028D4BB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

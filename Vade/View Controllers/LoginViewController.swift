@@ -15,7 +15,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +32,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUpElements() {
-        // hide error label
-        errorLabel.alpha = 0
-        
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(loginButton)
@@ -47,8 +43,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
             if err != nil {
-                self.errorLabel.text = err!.localizedDescription
-                self.errorLabel.alpha = 1
+                Alert.shared.setTitleAndMessage(title: "Login failed", message: err!.localizedDescription)
+                self.present(Alert.shared.getAlert(), animated: true, completion: nil)
             }
             else {
                 // update user last visit time
@@ -60,6 +56,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func transitionToHome() {
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        let transition = CATransition()
+         
+        transition.type = .fade
+         
+        transition.duration = 1
+         
+        view.window?.layer.add(transition, forKey: kCATransition)
         
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
