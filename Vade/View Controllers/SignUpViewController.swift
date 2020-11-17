@@ -12,6 +12,7 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
+    // outlets for text fields and button
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -29,6 +30,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         setUpElements()
     }
     
+    // for hide keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -43,6 +45,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         Utilities.styleFilledButton(signUpButton)
     }
     
+    // validate all text fields values are correct
     func validateFields() -> String?
     {
         // Check that all fields are filled in
@@ -62,12 +65,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         return nil
     }
     
+    // signInButton action
     @IBAction func signUpTapped(_ sender: Any) {
         let error = validateFields()
         
         if error != nil {
-            Alert.shared.setTitleAndMessage(title: "Sign Up failed", message: error!)
-            self.present(Alert.shared.getAlert(), animated: true, completion: nil)
+            self.showAlert(title: "Sign Up failed", message: error!)
         }
         else {
             // clean all fields from tabs or spaces
@@ -76,10 +79,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
+            // create user with email and password
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 if err != nil {
-                    Alert.shared.setTitleAndMessage(title: "Sign Up failed", message: err!.localizedDescription)
-                    self.present(Alert.shared.getAlert(), animated: true, completion: nil)
+                    self.showAlert(title: "Sign Up failed", message: err!.localizedDescription)
                 }
                 else {
                     let db = Firestore.firestore()
@@ -90,30 +93,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         "last_visit": Utilities.getCurrentDateAndTime()
                     ])
                     
-                    self.transitionToHome()
+                    // set data for app vade user
+                    VadeUser.shared.setName(name: firstName + " " + lastName)
+                    VadeUser.shared.setEmail(email: email)
+                    VadeUser.shared.setFirestoreID(id: result!.user.uid)
+                    
+                    Transitor.transitionToHealthDataVC(view: self.view, storyboard: self.storyboard, uid: result!.user.uid)
                 }
             }
         }
-    }
-    
-    func transitionToHome() {
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
-        navigationController?.pushViewController(homeViewController!, animated: true)
-        
-        //view.window?.rootViewController = homeViewController
-        //view.window?.makeKeyAndVisible()
-    }
-}
-
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
 }

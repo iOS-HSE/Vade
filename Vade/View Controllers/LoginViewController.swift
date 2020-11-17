@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    // outlets for elements on view
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -26,6 +27,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         setUpElements()
     }
     
+    // for hide heyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -37,37 +39,55 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         Utilities.styleFilledButton(loginButton)
     }
     
-    @IBAction func loginTapped(_ sender: Any) {
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
-            if err != nil {
-                Alert.shared.setTitleAndMessage(title: "Login failed", message: err!.localizedDescription)
-                self.present(Alert.shared.getAlert(), animated: true, completion: nil)
+    func setVadeUserData(userDocument: DocumentReference, id: String) {
+        print("Print VadeUser in setVadeUserData")
+        userDocument.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let name = document.get("name") as! String
+                let email = document.get("email") as! String
+                let birthday = document.get("birthday") as! String
+                let sex = document.get("sex") as! String
+                let weight = document.get("weight") as! String
+                let growth = document.get("growth") as! String
+
+                VadeUser.shared.setName(name: name)
+                VadeUser.shared.setEmail(email: email)
+                VadeUser.shared.setFirestoreID(id: id)
+                VadeUser.shared.setBirthday(date: birthday)
+                VadeUser.shared.setSex(sex: sex)
+                VadeUser.shared.setWeight(weight: weight)
+                VadeUser.shared.setGrowth(growth: growth)
+                
+                Transitor.transitionToTabBarVC(view: self.view, storyboard: self.storyboard)
+
             }
             else {
-                // update user last visit time
-                Firestore.firestore().collection("users").document(result!.user.uid).setData(["last_visit": Utilities.getCurrentDateAndTime()], merge: true)
-                self.transitionToHome()
+                print("Document does not exist")
             }
         }
     }
     
-    func transitionToHome() {
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+    // action for loginButton
+    @IBAction func loginTapped(_ sender: Any) {
         
-        let transition = CATransition()
-         
-        transition.type = .fade
-         
-        transition.duration = 1
-         
-        view.window?.layer.add(transition, forKey: kCATransition)
+        // get clean fields without spaces
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
+        // sign in wth email and password
+        Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+            if err != nil {
+                self.showAlert(title: "Login failed", message: err!.localizedDescription)
+            }
+            else {
+                let db = Firestore.firestore().collection("users")
+                let userDocument = db.document(result!.user.uid)
+                // update user last visit time
+                userDocument.setData(["last_visit": Utilities.getCurrentDateAndTime()], merge: true)
+                
+                self.setVadeUserData(userDocument: userDocument, id: result!.user.uid)
+            }
+        }
     }
-    
 }
 
