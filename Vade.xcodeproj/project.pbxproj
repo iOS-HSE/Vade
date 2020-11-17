@@ -9,24 +9,34 @@
 /* Begin PBXBuildFile section */
 		2819579AD6459ABF1CDAEB87 /* Pods_Vade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48EB97A844021E23046DB5C /* Pods_Vade.framework */; };
 		412FB49B2559D542006726CC /* FirestoreUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FB49A2559D542006726CC /* FirestoreUser.swift */; };
-		412FB4A32559DB73006726CC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FB4A22559DB73006726CC /* Alert.swift */; };
+		41581E982562F78F009DC27B /* PickerCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581E972562F78F009DC27B /* PickerCustomCell.swift */; };
+		41581E9D256309D3009DC27B /* DatePickerCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581E9C256309D3009DC27B /* DatePickerCustomCell.swift */; };
+		41581EA225632C70009DC27B /* CustomDetailCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581EA125632C70009DC27B /* CustomDetailCellBuilder.swift */; };
+		41581EB925641FC6009DC27B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581EB825641FC6009DC27B /* Extensions.swift */; };
+		41581EC125642BA0009DC27B /* Transitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581EC025642BA0009DC27B /* Transitor.swift */; };
+		41581EC625642D82009DC27B /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581EC525642D82009DC27B /* MainTabBarViewController.swift */; };
+		41581ED125643506009DC27B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581ED025643506009DC27B /* ProfileViewController.swift */; };
+		41581ED625645096009DC27B /* VadeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581ED525645096009DC27B /* VadeUser.swift */; };
 		4159B92A252876190028D4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B929252876190028D4BB /* AppDelegate.swift */; };
 		4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B92B252876190028D4BB /* SceneDelegate.swift */; };
-		4159B92E252876190028D4BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B92D252876190028D4BB /* ViewController.swift */; };
+		4159B92E252876190028D4BB /* AuthMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B92D252876190028D4BB /* AuthMethodsViewController.swift */; };
 		4159B931252876190028D4BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4159B92F252876190028D4BB /* Main.storyboard */; };
 		4159B9332528761A0028D4BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4159B9322528761A0028D4BB /* Assets.xcassets */; };
 		4159B9362528761A0028D4BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4159B9342528761A0028D4BB /* LaunchScreen.storyboard */; };
 		4159B9412528761B0028D4BB /* VadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B9402528761B0028D4BB /* VadeTests.swift */; };
 		4159B94C2528761B0028D4BB /* VadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B94B2528761B0028D4BB /* VadeUITests.swift */; };
 		4159B97025287D130028D4BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B96F25287D130028D4BB /* LoginViewController.swift */; };
-		4159B97525287D280028D4BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B97425287D280028D4BB /* HomeViewController.swift */; };
+		4159B97525287D280028D4BB /* HealthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B97425287D280028D4BB /* HealthDataViewController.swift */; };
 		4159B97A25287D3C0028D4BB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B97925287D3C0028D4BB /* SignUpViewController.swift */; };
 		4159B98025287E910028D4BB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B97F25287E910028D4BB /* Utilities.swift */; };
 		4159B985252897EE0028D4BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4159B984252897EE0028D4BB /* GoogleService-Info.plist */; };
 		4159B9B82529E0D90028D4BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B9B72529E0D90028D4BB /* Constants.swift */; };
 		4159B9E8252A3C8D0028D4BB /* data in Resources */ = {isa = PBXBuildFile; fileRef = 4159B9E7252A3C8D0028D4BB /* data */; };
-		417632DF255F126100C0CBF3 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417632DE255F126100C0CBF3 /* DatePickerTableViewCell.swift */; };
-		417632E4255F139600C0CBF3 /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417632E3255F139600C0CBF3 /* PickerTableViewCell.swift */; };
+		4176334D2561340200C0CBF3 /* PickerTableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176334C2561340200C0CBF3 /* PickerTableCellBuilder.swift */; };
+		41763352256134D200C0CBF3 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41763351256134D200C0CBF3 /* Builder.swift */; };
+		4176335A25613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176335925613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift */; };
+		4176335F25613F5A00C0CBF3 /* CustomDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176335E25613F5A00C0CBF3 /* CustomDetailCell.swift */; };
+		417633642561433300C0CBF3 /* CellBuildersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417633632561433300C0CBF3 /* CellBuildersManager.swift */; };
 		B90BF2EA49FCDE0EC81C60EE /* Pods_Vade_VadeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84C49291F5ACD0BE18700AD /* Pods_Vade_VadeUITests.framework */; };
 		F8BDD5E56969D823ECB948CA /* Pods_VadeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C0DAE742028C010F9F2EB7 /* Pods_VadeTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,11 +60,18 @@
 
 /* Begin PBXFileReference section */
 		412FB49A2559D542006726CC /* FirestoreUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUser.swift; sourceTree = "<group>"; };
-		412FB4A22559DB73006726CC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		41581E972562F78F009DC27B /* PickerCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerCustomCell.swift; sourceTree = "<group>"; };
+		41581E9C256309D3009DC27B /* DatePickerCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCustomCell.swift; sourceTree = "<group>"; };
+		41581EA125632C70009DC27B /* CustomDetailCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDetailCellBuilder.swift; sourceTree = "<group>"; };
+		41581EB825641FC6009DC27B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		41581EC025642BA0009DC27B /* Transitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitor.swift; sourceTree = "<group>"; };
+		41581EC525642D82009DC27B /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		41581ED025643506009DC27B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		41581ED525645096009DC27B /* VadeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VadeUser.swift; sourceTree = "<group>"; };
 		4159B926252876190028D4BB /* Vade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4159B929252876190028D4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4159B92B252876190028D4BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4159B92D252876190028D4BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4159B92D252876190028D4BB /* AuthMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMethodsViewController.swift; sourceTree = "<group>"; };
 		4159B930252876190028D4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4159B9322528761A0028D4BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4159B9352528761A0028D4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,14 +83,17 @@
 		4159B94B2528761B0028D4BB /* VadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VadeUITests.swift; sourceTree = "<group>"; };
 		4159B94D2528761B0028D4BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4159B96F25287D130028D4BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4159B97425287D280028D4BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4159B97425287D280028D4BB /* HealthDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataViewController.swift; sourceTree = "<group>"; };
 		4159B97925287D3C0028D4BB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4159B97F25287E910028D4BB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4159B984252897EE0028D4BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4159B9B72529E0D90028D4BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4159B9E7252A3C8D0028D4BB /* data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data; sourceTree = SOURCE_ROOT; };
-		417632DE255F126100C0CBF3 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
-		417632E3255F139600C0CBF3 /* PickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
+		4176334C2561340200C0CBF3 /* PickerTableCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableCellBuilder.swift; sourceTree = "<group>"; };
+		41763351256134D200C0CBF3 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		4176335925613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableCellBuilder.swift; sourceTree = "<group>"; };
+		4176335E25613F5A00C0CBF3 /* CustomDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDetailCell.swift; sourceTree = "<group>"; };
+		417633632561433300C0CBF3 /* CellBuildersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBuildersManager.swift; sourceTree = "<group>"; };
 		6BBB39769BC1ED450D089089 /* Pods-Vade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade.debug.xcconfig"; path = "Target Support Files/Pods-Vade/Pods-Vade.debug.xcconfig"; sourceTree = "<group>"; };
 		85DB99FA57D2509B955C0A78 /* Pods-Vade-VadeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade-VadeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A34C20E44599B1DD401E2BE4 /* Pods-Vade-VadeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade-VadeUITests.release.xcconfig"; path = "Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,9 +150,17 @@
 			isa = PBXGroup;
 			children = (
 				412FB49A2559D542006726CC /* FirestoreUser.swift */,
-				412FB4A22559DB73006726CC /* Alert.swift */,
+				41581ED525645096009DC27B /* VadeUser.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		41581EB725641F7E009DC27B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41581EB825641FC6009DC27B /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4159B91D252876190028D4BB = {
@@ -160,6 +188,7 @@
 		4159B928252876190028D4BB /* Vade */ = {
 			isa = PBXGroup;
 			children = (
+				41581EB725641F7E009DC27B /* Extensions */,
 				412FB4962559D525006726CC /* Models */,
 				4159B97E25287E750028D4BB /* Helpers */,
 				4159B95C252876FA0028D4BB /* View Controllers */,
@@ -196,10 +225,12 @@
 		4159B95C252876FA0028D4BB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4159B92D252876190028D4BB /* ViewController.swift */,
+				4159B92D252876190028D4BB /* AuthMethodsViewController.swift */,
 				4159B96F25287D130028D4BB /* LoginViewController.swift */,
-				4159B97425287D280028D4BB /* HomeViewController.swift */,
+				4159B97425287D280028D4BB /* HealthDataViewController.swift */,
 				4159B97925287D3C0028D4BB /* SignUpViewController.swift */,
+				41581EC525642D82009DC27B /* MainTabBarViewController.swift */,
+				41581ED025643506009DC27B /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -207,12 +238,27 @@
 		4159B97E25287E750028D4BB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4176334B256133D400C0CBF3 /* Builders */,
 				4159B97F25287E910028D4BB /* Utilities.swift */,
 				4159B9B72529E0D90028D4BB /* Constants.swift */,
-				417632DE255F126100C0CBF3 /* DatePickerTableViewCell.swift */,
-				417632E3255F139600C0CBF3 /* PickerTableViewCell.swift */,
+				4176335E25613F5A00C0CBF3 /* CustomDetailCell.swift */,
+				41581E972562F78F009DC27B /* PickerCustomCell.swift */,
+				41581E9C256309D3009DC27B /* DatePickerCustomCell.swift */,
+				41581EC025642BA0009DC27B /* Transitor.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4176334B256133D400C0CBF3 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				4176334C2561340200C0CBF3 /* PickerTableCellBuilder.swift */,
+				4176335925613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift */,
+				41581EA125632C70009DC27B /* CustomDetailCellBuilder.swift */,
+				41763351256134D200C0CBF3 /* Builder.swift */,
+				417633632561433300C0CBF3 /* CellBuildersManager.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 		F2F7EC597759905939255222 /* Frameworks */ = {
@@ -501,17 +547,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41581E9D256309D3009DC27B /* DatePickerCustomCell.swift in Sources */,
 				4159B97A25287D3C0028D4BB /* SignUpViewController.swift in Sources */,
-				417632E4255F139600C0CBF3 /* PickerTableViewCell.swift in Sources */,
+				4176334D2561340200C0CBF3 /* PickerTableCellBuilder.swift in Sources */,
+				41581EC625642D82009DC27B /* MainTabBarViewController.swift in Sources */,
 				412FB49B2559D542006726CC /* FirestoreUser.swift in Sources */,
-				4159B97525287D280028D4BB /* HomeViewController.swift in Sources */,
-				417632DF255F126100C0CBF3 /* DatePickerTableViewCell.swift in Sources */,
+				41581EC125642BA0009DC27B /* Transitor.swift in Sources */,
+				4176335A25613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift in Sources */,
+				4159B97525287D280028D4BB /* HealthDataViewController.swift in Sources */,
+				41763352256134D200C0CBF3 /* Builder.swift in Sources */,
 				4159B98025287E910028D4BB /* Utilities.swift in Sources */,
+				41581ED625645096009DC27B /* VadeUser.swift in Sources */,
 				4159B97025287D130028D4BB /* LoginViewController.swift in Sources */,
-				4159B92E252876190028D4BB /* ViewController.swift in Sources */,
+				4159B92E252876190028D4BB /* AuthMethodsViewController.swift in Sources */,
+				41581E982562F78F009DC27B /* PickerCustomCell.swift in Sources */,
 				4159B92A252876190028D4BB /* AppDelegate.swift in Sources */,
+				4176335F25613F5A00C0CBF3 /* CustomDetailCell.swift in Sources */,
 				4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */,
-				412FB4A32559DB73006726CC /* Alert.swift in Sources */,
+				41581EB925641FC6009DC27B /* Extensions.swift in Sources */,
+				41581EA225632C70009DC27B /* CustomDetailCellBuilder.swift in Sources */,
+				41581ED125643506009DC27B /* ProfileViewController.swift in Sources */,
+				417633642561433300C0CBF3 /* CellBuildersManager.swift in Sources */,
 				4159B9B82529E0D90028D4BB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
