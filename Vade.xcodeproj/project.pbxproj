@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2B6CC5255EC14800AD2816 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */; };
 		2819579AD6459ABF1CDAEB87 /* Pods_Vade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48EB97A844021E23046DB5C /* Pods_Vade.framework */; };
 		4159B92A252876190028D4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B929252876190028D4BB /* AppDelegate.swift */; };
 		4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B92B252876190028D4BB /* SceneDelegate.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4159B926252876190028D4BB /* Vade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4159B929252876190028D4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4159B92B252876190028D4BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				4159B92D252876190028D4BB /* ViewController.swift */,
 				4159B96F25287D130028D4BB /* LoginViewController.swift */,
+				0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */,
 				4159B97425287D280028D4BB /* HomeViewController.swift */,
 				4159B97925287D3C0028D4BB /* SignUpViewController.swift */,
 			);
@@ -487,6 +490,7 @@
 				4159B97025287D130028D4BB /* LoginViewController.swift in Sources */,
 				4159B92E252876190028D4BB /* ViewController.swift in Sources */,
 				4159B92A252876190028D4BB /* AppDelegate.swift in Sources */,
+				0E2B6CC5255EC14800AD2816 /* OnboardingViewController.swift in Sources */,
 				4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */,
 				4159B9B82529E0D90028D4BB /* Constants.swift in Sources */,
 			);
