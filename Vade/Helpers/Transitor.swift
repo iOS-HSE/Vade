@@ -37,4 +37,17 @@ class Transitor {
         view.window?.rootViewController = tabBarVC
         view.window?.makeKeyAndVisible()
     }
+    
+    static func transitionToAuthMethodsVC(view: UIView, storyboard: UIStoryboard?) {
+        let authVC = storyboard?.instantiateViewController(identifier: Constants.Storyboard.authMethodsVC) as? AuthMethodsViewController
+        
+        // for animated transition
+        let transition = CATransition()
+        transition.type = .fade
+        transition.duration = 1
+        view.window?.layer.add(transition, forKey: kCATransition)
+        
+        view.window?.rootViewController = authVC
+        view.window?.makeKeyAndVisible()
+    }
 }

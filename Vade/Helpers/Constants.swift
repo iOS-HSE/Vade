@@ -13,5 +13,6 @@ struct Constants
     {
         static let healthDataVC = "HealthDataVC"
         static let tabBarVC = "TabBarVC"
+        static let authMethodsVC = "AuthMethodsVC"
     }
 }
