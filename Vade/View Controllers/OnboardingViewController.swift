@@ -11,21 +11,17 @@ class OnboardingViewController: UIViewController {
 
     @IBOutlet var holderView: UIView!
     
-    
     let scrollView = UIScrollView()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
     
     override func viewDidLayoutSubviews() {
-        configure()
+        configurescrollView()
         super.viewDidLayoutSubviews()
-        if !Core.shared.isNewUser(){
+        if !OnboardingManager.shared.isNewUser(){
             let viewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.viewController) as? ViewController
             
             view.window?.rootViewController = viewController
@@ -33,7 +29,7 @@ class OnboardingViewController: UIViewController {
         }
     }
     
-    private func configure() {
+    private func configurescrollView() {
          // set up scrollview
         scrollView.frame = holderView.bounds
         holderView.addSubview(scrollView)
@@ -71,13 +67,12 @@ class OnboardingViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: holderView.frame.size.width*3, height: 0)
         scrollView.isPagingEnabled = true
-        
     }
     
-    @objc func didTapButton(_ button: UIButton){
+    @objc func didTapButton(_ button: UIButton) {
         guard button.tag < 4 else {
             // dismiss
-            Core.shared.setIsNotNewUser()
+            OnboardingManager.shared.setIsNotNewUser()
             dismiss(animated: true, completion: nil)
             let viewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.viewController) as? ViewController
             
@@ -87,21 +82,20 @@ class OnboardingViewController: UIViewController {
         }
         // scroll to next page
         scrollView.setContentOffset(CGPoint(x: holderView.frame.size.width * CGFloat(button.tag), y: 0), animated: true)
-    
         }
 
 }
-class Core {
+class OnboardingManager {
     
-    static let shared = Core()
+    static let shared = OnboardingManager()
+    
+    private init() {}
     
     func isNewUser() -> Bool {
         return !UserDefaults.standard.bool(forKey: "isNewUser")
     }
     
-    
     func setIsNotNewUser() {
         UserDefaults.standard.set(true, forKey: "isNewUser")
     }
-    
 }

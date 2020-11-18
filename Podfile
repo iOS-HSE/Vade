@@ -23,6 +23,5 @@ target 'Vade' do
   pod 'GoogleSignIn'
   pod 'FacebookCore'
   pod 'FacebookLogin'
-  pod 'CTHelp'
 
 end
