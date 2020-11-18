@@ -123,6 +123,14 @@ class AuthMethodsViewController: UIViewController{
         Utilities.styleFilledButton(signInFacebookButton)
         Utilities.styleHollowButton(loginButton)
     }
+    
+    @IBAction func resetUser(_ sender: UIButton) {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+        defaults.removeObject(forKey: key)
+        }
+    }
 }
 
 
