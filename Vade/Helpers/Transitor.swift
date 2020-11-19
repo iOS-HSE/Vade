@@ -38,8 +38,8 @@ class Transitor {
         view.window?.makeKeyAndVisible()
     }
     
-    static func transitionToAuthMethodsVC(view: UIView, storyboard: UIStoryboard?) {
-        let authVC = storyboard?.instantiateViewController(identifier: Constants.Storyboard.authMethodsVC) as? AuthMethodsViewController
+    static func transitionToAuthNavigationVC(view: UIView, storyboard: UIStoryboard?) {
+        let authNavigationVC = storyboard?.instantiateViewController(identifier: Constants.Storyboard.authNavigationVC) as? UINavigationController
         
         // for animated transition
         let transition = CATransition()
@@ -47,7 +47,7 @@ class Transitor {
         transition.duration = 1
         view.window?.layer.add(transition, forKey: kCATransition)
         
-        view.window?.rootViewController = authVC
+        view.window?.rootViewController = authNavigationVC
         view.window?.makeKeyAndVisible()
     }
 }

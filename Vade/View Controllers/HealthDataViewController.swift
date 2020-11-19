@@ -20,11 +20,12 @@ class HealthDataViewController: UIViewController {
         // set VC as table view delegate and dataSource, it's required for tableView work
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorInset = UIEdgeInsets.zero
     }
     
     // action for continue button
     @IBAction func continueTapped(_ sender: Any) {
-        
+        print("CONTINUE TAPPED")
         let db = Firestore.firestore()
         
         // get info from table to add to user

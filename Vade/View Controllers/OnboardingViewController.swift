@@ -22,7 +22,7 @@ class OnboardingViewController: UIViewController {
         configurescrollView()
         //super.viewDidLayoutSubviews()
         if !OnboardingManager.shared.isNewUser(){
-            Transitor.transitionToAuthMethodsVC(view: self.view, storyboard: self.storyboard)
+            Transitor.transitionToAuthNavigationVC(view: self.view, storyboard: self.storyboard)
         }
     }
     
@@ -71,7 +71,7 @@ class OnboardingViewController: UIViewController {
             // dismiss
             OnboardingManager.shared.setIsNotNewUser()
             dismiss(animated: true, completion: nil)
-            Transitor.transitionToAuthMethodsVC(view: self.view, storyboard: self.storyboard)
+            Transitor.transitionToAuthNavigationVC(view: self.view, storyboard: self.storyboard)
             return
         }
         // scroll to next page

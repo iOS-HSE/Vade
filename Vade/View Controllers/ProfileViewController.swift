@@ -25,10 +25,12 @@ class ProfileViewController: UIViewController {
         personalDataTableView.delegate = self
         personalDataTableView.dataSource = self
         personalDataTableView.tag = 1
+        personalDataTableView.separatorInset = UIEdgeInsets.zero
         
         healthDataTableView.delegate = self
         healthDataTableView.dataSource = self
         healthDataTableView.tag = 2
+        healthDataTableView.separatorInset = UIEdgeInsets.zero
     }
     
     func initTablesValues() {

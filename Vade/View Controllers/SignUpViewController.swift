@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         // Check if the password is secure
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if !Utilities.isPasswordValid(cleanedPassword) {
-            return "Please make sure your password at least 8 chars, contains a special char and a number"
+            return "Please make sure your password at least 8 chars, contains a number, upper and lowercase symbols"
         }
         
         return nil
