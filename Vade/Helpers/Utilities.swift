@@ -11,6 +11,16 @@ import UIKit
 
 class Utilities
 {
+    static func styleTextView(_ textView: UITextView) {
+        textView.backgroundColor = UIColor.systemOrange
+        textView.layer.cornerRadius = 25.0
+        textView.tintColor = UIColor.white
+    }
+    
+    @objc static func buttonPressed() {
+        print("Button pressed")
+    }
+    
     static func styleTextField(_ textField: UITextField)
     {
         // create the bottom line
@@ -47,7 +57,7 @@ class Utilities
     static func isPasswordValid(_ password: String) -> Bool
     {
         // validate password with specified rules
-        let passText = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        let passText = NSPredicate(format: "SELF MATCHES %@", "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$")
         return passText.evaluate(with: password)
     }
     

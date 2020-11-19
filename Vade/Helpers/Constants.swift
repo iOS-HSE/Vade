@@ -11,7 +11,9 @@ struct Constants
 {
     struct Storyboard
     {
-        static let homeViewController = "HomeVC"
-        static let viewController = "VC"
+        static let healthDataVC = "HealthDataVC"
+        static let tabBarVC = "TabBarVC"
+        static let authMethodsVC = "AuthMethodsVC"
+        static let authNavigationVC = "AuthNavigationVC"
     }
 }

@@ -20,12 +20,9 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         configurescrollView()
-        super.viewDidLayoutSubviews()
+        //super.viewDidLayoutSubviews()
         if !OnboardingManager.shared.isNewUser(){
-            let viewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.viewController) as? ViewController
-            
-            view.window?.rootViewController = viewController
-            view.window?.makeKeyAndVisible()
+            Transitor.transitionToAuthNavigationVC(view: self.view, storyboard: self.storyboard)
         }
     }
     
@@ -74,17 +71,15 @@ class OnboardingViewController: UIViewController {
             // dismiss
             OnboardingManager.shared.setIsNotNewUser()
             dismiss(animated: true, completion: nil)
-            let viewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.viewController) as? ViewController
-            
-            view.window?.rootViewController = viewController
-            view.window?.makeKeyAndVisible()
+            Transitor.transitionToAuthNavigationVC(view: self.view, storyboard: self.storyboard)
             return
         }
         // scroll to next page
         scrollView.setContentOffset(CGPoint(x: holderView.frame.size.width * CGFloat(button.tag), y: 0), animated: true)
-        }
+    }
 
 }
+
 class OnboardingManager {
     
     static let shared = OnboardingManager()
