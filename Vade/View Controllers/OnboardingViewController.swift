@@ -69,7 +69,7 @@ class OnboardingViewController: UIViewController {
     @objc func didTapButton(_ button: UIButton) {
         guard button.tag < 4 else {
             // dismiss
-            OnboardingManager.shared.setIsNotNewUser()
+            OnboardingManager.shared.setIsNewUser(value: false)
             dismiss(animated: true, completion: nil)
             Transitor.transitionToAuthNavigationVC(view: self.view, storyboard: self.storyboard)
             return
@@ -87,10 +87,15 @@ class OnboardingManager {
     private init() {}
     
     func isNewUser() -> Bool {
-        return !UserDefaults.standard.bool(forKey: "isNewUser")
+        
+        guard UserDefaults.standard.object(forKey: "isNewUser") != nil else {
+            return true
+        }
+        
+        return UserDefaults.standard.bool(forKey: "isNewUser")
     }
     
-    func setIsNotNewUser() {
-        UserDefaults.standard.set(true, forKey: "isNewUser")
+    func setIsNewUser(value: Bool) {
+        UserDefaults.standard.set(value, forKey: "isNewUser")
     }
 }
