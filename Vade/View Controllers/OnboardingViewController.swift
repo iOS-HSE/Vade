@@ -29,12 +29,11 @@ class OnboardingViewController: UIViewController {
     private func configurescrollView() {
          // set up scrollview
         scrollView.frame = holderView.bounds
-        holderView.addSubview(scrollView)
         
         let titles = ["Welcome", "Set your route", "Train with your friends", "Choose your workout"]
         for x in 0..<4 {
             let pageView = UIView(frame: CGRect(x:CGFloat(x) * (holderView.frame.size.width), y:0, width: holderView.frame.size.width, height: holderView.frame.size.height))
-            scrollView.addSubview(pageView)
+            pageView.accessibilityIdentifier = "OnboardView_\(x)"
             
             // titile, image and button
             let label = UILabel(frame: CGRect(x: 10, y: 10, width: pageView.frame.size.width-20, height: 120))
@@ -43,8 +42,8 @@ class OnboardingViewController: UIViewController {
             
             label.textAlignment = .center
             label.font = UIFont(name: "Helvetica-Bold", size: 32)
-            pageView.addSubview(label)
             label.text = titles[x]
+            pageView.addSubview(label)
             
             imageView.contentMode = .scaleAspectFit
             imageView.image = UIImage(named: "onboarding_\(x+1)")
@@ -60,8 +59,12 @@ class OnboardingViewController: UIViewController {
             button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
             button.tag = x+1
             pageView.addSubview(button)
+            
+            scrollView.addSubview(pageView)
+            
         }
         
+        holderView.addSubview(scrollView)
         scrollView.contentSize = CGSize(width: holderView.frame.size.width*3, height: 0)
         scrollView.isPagingEnabled = true
     }
