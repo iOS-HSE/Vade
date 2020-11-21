@@ -32,7 +32,7 @@ class Authentification: XCTestCase {
         }
     }
     
-    func tryToSignUpWithIncorrectPassword() throws {
+    func testTryToSignUpWithIncorrectPassword() throws {
         
         let app = XCUIApplication()
         app.launch()
@@ -65,7 +65,21 @@ class Authentification: XCTestCase {
         doneButton.tap()
         
         app.buttons["Sign Up"].staticTexts["Sign Up"].tap()
-        app.alerts["Sign Up failed"].scrollViews.otherElements.buttons["OK"].tap()
+        let alertMessage = "Please make sure your password at least 8 chars, contains a number, upper and lowercase symbols"
+        XCTAssert(app.alerts.element.staticTexts[alertMessage].exists)
     }
-
+    
+    func testTryToSignUpWithEmptyFields() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        if (app.scrollViews.otherElements.staticTexts["Welcome"].isHittable) {
+            skipOnboarding(app: app)
+        }
+        app/*@START_MENU_TOKEN@*/.staticTexts["Sign Up"]/*[[".buttons[\"Sign Up\"].staticTexts[\"Sign Up\"]",".staticTexts[\"Sign Up\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        app.buttons["Sign Up"].staticTexts["Sign Up"].tap()
+        let alertMessage = "Please, fill in all fields!"
+        XCTAssert(app.alerts.element.staticTexts[alertMessage].exists)
+    }
 }
