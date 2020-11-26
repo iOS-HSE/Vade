@@ -26,6 +26,11 @@ class AuthMethodsViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func signUpTapped(_ sender: Any) {
+        navigationController?.pushViewController(LBTASignUpController(), animated: true)
+    }
+    
+    
     // action for signInGoogleButton
     @IBAction func signInGoogleTapped(_ sender: Any) {
         // call google sign in form

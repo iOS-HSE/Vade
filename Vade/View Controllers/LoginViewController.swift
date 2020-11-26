@@ -34,8 +34,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setUpElements() {
-        Utilities.styleTextField(emailTextField)
-        Utilities.styleTextField(passwordTextField)
+        //tilities.styleTextField(emailTextField)
+        //Utilities.styleTextField(passwordTextField)
+        emailTextField.setBottomBorder()
+        passwordTextField.setBottomBorder()
         Utilities.styleFilledButton(loginButton)
     }
     

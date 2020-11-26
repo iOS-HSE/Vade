@@ -12,13 +12,13 @@ import Foundation
 class Transitor {
 
     static func transitionToHealthDataVC(view: UIView, storyboard: UIStoryboard?, uid: String) {
-        let healthDataVC = storyboard?.instantiateViewController(identifier: Constants.Storyboard.healthDataVC) as? HealthDataViewController
-        healthDataVC?.userID = uid
+        let healthDataVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: Constants.Storyboard.healthDataVC) as HealthDataViewController
+        healthDataVC.userID = uid
         
         // for animated transition
         let transition = CATransition()
-        transition.type = .fade
-        transition.duration = 1
+        transition.type = .moveIn
+        transition.duration = 0.5
         view.window?.layer.add(transition, forKey: kCATransition)
         
         view.window?.rootViewController = healthDataVC

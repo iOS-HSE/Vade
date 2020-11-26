@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var personalDataTableView: UITableView!
     @IBOutlet weak var healthDataTableView: UITableView!
+    @IBOutlet weak var signOutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,16 @@ class ProfileViewController: UIViewController {
         personalDataValues.append(VadeUser.shared.getName())
         personalDataValues.append(VadeUser.shared.getEmail())
         personalDataValues.append(VadeUser.shared.getFirestoreID())
+    }
+    
+    @IBAction func signOutTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            Transitor.transitionToAuthNavigationVC(view: self.view, storyboard: self.storyboard)
+        } catch let signOutError as NSError {
+            print("ERROR: \(signOutError)")
+        }
     }
 }
 

@@ -53,14 +53,6 @@ class HealthDataViewController: UIViewController {
         VadeUser.shared.setWeight(weight: weight)
         VadeUser.shared.setGrowth(growth: growth)
         
-        print(VadeUser.shared.getName())
-        print(VadeUser.shared.getEmail())
-        print(VadeUser.shared.getSex())
-        print(VadeUser.shared.getGrowth())
-        print(VadeUser.shared.getWeight())
-        print(VadeUser.shared.getBirthday())
-        print(VadeUser.shared.getFirestoreID())
-        
         // got to tab bar vc
         Transitor.transitionToTabBarVC(view: self.view, storyboard: self.storyboard)
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E2B6CC5255EC14800AD2816 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */; };
 		2819579AD6459ABF1CDAEB87 /* Pods_Vade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48EB97A844021E23046DB5C /* Pods_Vade.framework */; };
+		41240D06256A6B6C008C597F /* LBTASignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41240D05256A6B6C008C597F /* LBTASignUpController.swift */; };
 		412FB49B2559D542006726CC /* FirestoreUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FB49A2559D542006726CC /* FirestoreUser.swift */; };
 		41581E982562F78F009DC27B /* PickerCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581E972562F78F009DC27B /* PickerCustomCell.swift */; };
 		41581E9D256309D3009DC27B /* DatePickerCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581E9C256309D3009DC27B /* DatePickerCustomCell.swift */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		41240D05256A6B6C008C597F /* LBTASignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTASignUpController.swift; sourceTree = "<group>"; };
 		412FB49A2559D542006726CC /* FirestoreUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUser.swift; sourceTree = "<group>"; };
 		41581E972562F78F009DC27B /* PickerCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerCustomCell.swift; sourceTree = "<group>"; };
 		41581E9C256309D3009DC27B /* DatePickerCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCustomCell.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		41581EC525642D82009DC27B /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		41581ED025643506009DC27B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		41581ED525645096009DC27B /* VadeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VadeUser.swift; sourceTree = "<group>"; };
-		0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4159B926252876190028D4BB /* Vade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4159B929252876190028D4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4159B92B252876190028D4BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				4159B97925287D3C0028D4BB /* SignUpViewController.swift */,
 				41581EC525642D82009DC27B /* MainTabBarViewController.swift */,
 				41581ED025643506009DC27B /* ProfileViewController.swift */,
+				41240D05256A6B6C008C597F /* LBTASignUpController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				4159B97525287D280028D4BB /* HealthDataViewController.swift in Sources */,
 				41763352256134D200C0CBF3 /* Builder.swift in Sources */,
 				4159B98025287E910028D4BB /* Utilities.swift in Sources */,
+				41240D06256A6B6C008C597F /* LBTASignUpController.swift in Sources */,
 				41581ED625645096009DC27B /* VadeUser.swift in Sources */,
 				4159B97025287D130028D4BB /* LoginViewController.swift in Sources */,
 				4159B92E252876190028D4BB /* AuthMethodsViewController.swift in Sources */,
