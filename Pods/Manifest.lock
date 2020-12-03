@@ -355,6 +355,7 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - GTMSessionFetcher/Full (1.5.0):
     - GTMSessionFetcher/Core (= 1.5.0)
+  - LBTATools (1.0.12)
   - leveldb-library (1.22)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
@@ -371,6 +372,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - GoogleSignIn
+  - LBTATools
 
 SPEC REPOS:
   trunk:
@@ -396,6 +398,7 @@ SPEC REPOS:
     - gRPC-Core
     - GTMAppAuth
     - GTMSessionFetcher
+    - LBTATools
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -423,10 +426,11 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  LBTATools: 389a901a01b9a56bea5682c40cd6e23530f40015
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: 449d7bd2a13dcd2340384828b94b933588f0a1d2
+PODFILE CHECKSUM: fbf572b532ec62b57d7ddd2c888fa93e87aeec5f
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.9.3

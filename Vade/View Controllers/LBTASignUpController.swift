@@ -6,6 +6,9 @@
 //
 
 import LBTATools
+import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 class LBTASignUpController: LBTAFormController {
     
@@ -16,39 +19,6 @@ class LBTASignUpController: LBTAFormController {
     let passwordTextField = UITextField(placeholder: "Password")
     let passRequirementsLabel = UILabel(text: "At least 8 characters, numbers, uppercase and lowercase letters", textColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), numberOfLines: 0)
     let passwordStackView = UIStackView()
-    
-    @objc fileprivate func handleCancel() {
-        if let err = validateFields() {
-            self.showAlert(title: "Error", message: err)
-        }
-        else {
-            Transitor.transitionToHealthDataVC(view: view, storyboard: storyboard, uid: "123")
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
-    
-    func validateFields() -> String?
-    {
-        // Check that all fields are filled in
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-        {
-            return "Please, fill in all fields!"
-        }
-        
-        // Check if the password is secure
-        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        if !Utilities.isPasswordValid(cleanedPassword) {
-            return "Please make sure your password at least 8 chars, contains a number, upper and lowercase symbols"
-        }
-        
-        return nil
-    }
     
     override func viewDidLoad() {
         // configure view
@@ -83,18 +53,72 @@ class LBTASignUpController: LBTAFormController {
         signUpButton.constrainHeight(50)
         Utilities.styleFilledButton(signUpButton)
         formContainerStackView.addArrangedSubview(signUpButton)
+        
+        firstNameTextField.autocorrectionType = .no
+        lastNameTextField.autocorrectionType = .no
+        emailTextField.autocorrectionType = .no
+        passwordTextField.autocorrectionType = .no
     }
-}
-
-extension UITextField {
-    func setBottomBorder() {
-        self.borderStyle = .none
-        self.layer.backgroundColor = UIColor.white.cgColor
-
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor.systemOrange.cgColor
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        self.layer.shadowOpacity = 1.0
-        self.layer.shadowRadius = 0.0
-  }
+    
+    @objc fileprivate func handleCancel() {
+        let error = validateFields()
+        
+        if error != nil {
+            self.showAlert(title: "Sign Up failed", message: error!)
+        }
+        else {
+            // clean all fields from tabs or spaces
+            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // create user with email and password
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+                if err != nil {
+                    self.showAlert(title: "Sign Up failed", message: err!.localizedDescription)
+                }
+                else {
+                    let db = Firestore.firestore()
+                    
+                    db.collection("users").document(result!.user.uid).setData([
+                        "name": firstName + " " + lastName,
+                        "email": email,
+                        "last_visit": Utilities.getCurrentDateAndTime()
+                    ])
+                    
+                    // set data for app vade user
+                    VadeUser.shared.setName(name: firstName + " " + lastName)
+                    VadeUser.shared.setEmail(email: email)
+                    VadeUser.shared.setFirestoreID(id: result!.user.uid)
+                    
+                    Transitor.transitionToHealthDataVC(view: self.view, storyboard: self.storyboard, uid: result!.user.uid)
+                }
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func validateFields() -> String?
+    {
+        // Check that all fields are filled in
+        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        {
+            return "Please, fill in all fields!"
+        }
+        
+        // Check if the password is secure
+        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !Utilities.isPasswordValid(cleanedPassword) {
+            return "Please make sure your password at least 8 chars, contains a number, upper and lowercase symbols"
+        }
+        
+        return nil
+    }
 }

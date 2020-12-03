@@ -53,12 +53,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let growth = document.get("growth") as! String
 
                 VadeUser.shared.setName(name: name)
+                UserDefaults.standard.setValue(name, forKey: "userName")
                 VadeUser.shared.setEmail(email: email)
                 VadeUser.shared.setFirestoreID(id: id)
+                UserDefaults.standard.setValue(name, forKey: "userID")
                 VadeUser.shared.setBirthday(date: birthday)
+                UserDefaults.standard.setValue(birthday, forKey: "userBirthday")
                 VadeUser.shared.setSex(sex: sex)
+                UserDefaults.standard.setValue(sex, forKey: "userSex")
                 VadeUser.shared.setWeight(weight: weight)
+                UserDefaults.standard.setValue(weight, forKey: "userWeight")
                 VadeUser.shared.setGrowth(growth: growth)
+                UserDefaults.standard.setValue(growth, forKey: "userGrowth")
                 
                 Transitor.transitionToTabBarVC(view: self.view, storyboard: self.storyboard)
 
@@ -86,6 +92,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let userDocument = db.document(result!.user.uid)
                 // update user last visit time
                 userDocument.setData(["last_visit": Utilities.getCurrentDateAndTime()], merge: true)
+                UserDefaults.standard.setValue(email, forKey: "userEmail")
+                UserDefaults.standard.setValue(password, forKey: "userPassword")
+                UserDefaults.standard.setValue(true, forKey: "isUserLoggedIn")
                 
                 self.setVadeUserData(userDocument: userDocument, id: result!.user.uid)
             }

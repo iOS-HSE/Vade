@@ -20,6 +20,7 @@ class AuthMethodsViewController: UIViewController{
     @IBOutlet weak var signInFacebookButton: UIButton!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // set VC as GIDSignIn singleton delegate, it's required
         GIDSignIn.sharedInstance().delegate = self
