@@ -19,6 +19,8 @@ class AuthMethodsViewController: UIViewController{
     @IBOutlet weak var signInGoogleButton: UIButton!
     @IBOutlet weak var signInFacebookButton: UIButton!
     
+    private let authManager = AuthentificationManager()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -72,7 +74,7 @@ class AuthMethodsViewController: UIViewController{
                 let db = Firestore.firestore().collection("users")
                 let userDocument = db.document(authResult!.user.uid)
         
-                self.setVadeUserData(userDocument: userDocument, result: authResult!)
+                //self.setVadeUserData(userDocument: userDocument, result: authResult!)
                 
                 print("Successfully authentification!")
                 // go to next view controller
@@ -80,43 +82,43 @@ class AuthMethodsViewController: UIViewController{
         }
     }
     
-    func setVadeUserData(userDocument: DocumentReference, result: AuthDataResult) {
-        userDocument.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let name = document.get("name") as! String
-                let email = document.get("email") as! String
-                let birthday = document.get("birthday") as! String
-                let sex = document.get("sex") as! String
-                let weight = document.get("weight") as! String
-                let growth = document.get("growth") as! String
-                
-                VadeUser.shared.setName(name: name)
-                VadeUser.shared.setEmail(email: email)
-                VadeUser.shared.setFirestoreID(id: result.user.uid)
-                VadeUser.shared.setBirthday(date: birthday)
-                VadeUser.shared.setSex(sex: sex)
-                VadeUser.shared.setWeight(weight: weight)
-                VadeUser.shared.setGrowth(growth: growth)
-                
-                userDocument.setData(["last_visit": Utilities.getCurrentDateAndTime()], merge: true)
-                
-                Transitor.transitionToTabBarVC(view: self.view, storyboard: self.storyboard)
-            }
-            else {
-                VadeUser.shared.setName(name: result.user.displayName!)
-                VadeUser.shared.setEmail(email: result.user.email!)
-                VadeUser.shared.setFirestoreID(id: result.user.uid)
-                
-                userDocument.setData([
-                    "name": result.user.displayName!,
-                    "email": result.user.email!,
-                    "last_visit": Utilities.getCurrentDateAndTime()
-                ])
-                
-                Transitor.transitionToHealthDataVC(view: self.view, storyboard: self.storyboard, uid: result.user.uid)
-            }
-        }
-    }
+//    func setVadeUserData(userDocument: DocumentReference, result: AuthDataResult) {
+//        userDocument.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                let name = document.get("name") as! String
+//                let email = document.get("email") as! String
+//                let birthday = document.get("birthday") as! String
+//                let sex = document.get("sex") as! String
+//                let weight = document.get("weight") as! String
+//                let growth = document.get("growth") as! String
+//
+//                VadeUser.shared.setName(name: name)
+//                VadeUser.shared.setEmail(email: email)
+//                VadeUser.shared.setFirestoreID(id: result.user.uid)
+//                VadeUser.shared.setBirthday(date: birthday)
+//                VadeUser.shared.setSex(sex: sex)
+//                VadeUser.shared.setWeight(weight: weight)
+//                VadeUser.shared.setGrowth(growth: growth)
+//
+//                userDocument.setData(["last_visit": Utilities.getCurrentDateAndTime()], merge: true)
+//
+//                Transitor.transitionToTabBarVC(view: self.view, storyboard: self.storyboard)
+//            }
+//            else {
+//                VadeUser.shared.setName(name: result.user.displayName!)
+//                VadeUser.shared.setEmail(email: result.user.email!)
+//                VadeUser.shared.setFirestoreID(id: result.user.uid)
+//
+//                userDocument.setData([
+//                    "name": result.user.displayName!,
+//                    "email": result.user.email!,
+//                    "last_visit": Utilities.getCurrentDateAndTime()
+//                ])
+//
+//                Transitor.transitionToHealthDataVC(view: self.view, storyboard: self.storyboard, uid: result.user.uid)
+//            }
+//        }
+//    }
     
     override func viewDidLayoutSubviews() {
         setUpElements()
@@ -158,27 +160,20 @@ extension AuthMethodsViewController: GIDSignInDelegate {
     }
     
     func signIntoFirebaseWithGoogle(didSignInFor user: GIDGoogleUser!) {
-        // get credentials
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                        accessToken: authentication.accessToken)
+        authManager.signInWithGoogle(user: user, callback: transition)
+        self.showSpinner()
         
-        // sign in with given credentials
-        Auth.auth().signIn(with: credential) { (result, err) in
-            if err != nil {
-                print("Error: \(err?.localizedDescription)")
-                return
-            }
-            else {
-                // create user or update his last visit time
-                let db = Firestore.firestore().collection("users")
-                let userDocument = db.document(result!.user.uid)
-        
-                self.setVadeUserData(userDocument: userDocument, result: result!)
-                
-                print("Successfully authentification!")
-                // go to next view controller
-            }
+    }
+    
+    func transition(signInResult: FirebaseAuthResult) {
+        self.removeSpinner()
+        switch signInResult {
+            case .loggedIn:
+                Transitor.transitionToTabBarVC(view: self.view, storyboard: self.storyboard)
+            case .registered(let uid):
+                Transitor.transitionToHealthDataVC(view: self.view, storyboard: self.storyboard, uid: uid)
+            case .failure(let err):
+                self.showAlert(title: "SignIn Fail", message: err)
         }
     }
 }

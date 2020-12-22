@@ -94,9 +94,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     ])
                     
                     // set data for app vade user
-                    VadeUser.shared.setName(name: firstName + " " + lastName)
-                    VadeUser.shared.setEmail(email: email)
-                    VadeUser.shared.setFirestoreID(id: result!.user.uid)
+//                    VadeUser.shared.setName(name: firstName + " " + lastName)
+//                    VadeUser.shared.setEmail(email: email)
+//                    VadeUser.shared.setFirestoreID(id: result!.user.uid)
                     
                     Transitor.transitionToHealthDataVC(view: self.view, storyboard: self.storyboard, uid: result!.user.uid)
                 }

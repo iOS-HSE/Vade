@@ -13,8 +13,9 @@ class ProfileViewController: UIViewController {
     var personalDataLabels = ["Name", "Email", "Firestore ID"]
     var healthDataLabels = ["Sex", "Birthday", "Weight", "Growth"]
     
-    var personalDataValues: [String] = []
-    var healthDataValues: [String] = []
+    var personalDataValues: [String?] = []
+    var healthDataValues: [String?] = []
+    var cells: [UITableViewCell] = []
     
     @IBOutlet weak var personalDataTableView: UITableView!
     @IBOutlet weak var healthDataTableView: UITableView!
@@ -37,14 +38,14 @@ class ProfileViewController: UIViewController {
     
     func initTablesValues() {
         
-        healthDataValues.append(VadeUser.shared.getSex())
-        healthDataValues.append(VadeUser.shared.getBirthday())
-        healthDataValues.append(VadeUser.shared.getWeight())
-        healthDataValues.append(VadeUser.shared.getGrowth())
+        healthDataValues.append(VadeUser.shared.sex)
+        healthDataValues.append(VadeUser.shared.birthday)
+        healthDataValues.append(VadeUser.shared.weight)
+        healthDataValues.append(VadeUser.shared.growth)
         
-        personalDataValues.append(VadeUser.shared.getName())
-        personalDataValues.append(VadeUser.shared.getEmail())
-        personalDataValues.append(VadeUser.shared.getFirestoreID())
+        personalDataValues.append(VadeUser.shared.name)
+        personalDataValues.append(VadeUser.shared.email)
+        personalDataValues.append(VadeUser.shared.firestoreID)
     }
     
     @IBAction func signOutTapped(_ sender: Any) {
@@ -76,11 +77,13 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             var cell = UITableViewCell(style: .value1, reuseIdentifier: "idPersonal")
             cell.textLabel?.text = personalDataLabels[indexPath.item]
             cell.detailTextLabel?.text = personalDataValues[indexPath.item]
+            cells.append(cell)
             return cell
         default:
             var cell = UITableViewCell(style: .value1, reuseIdentifier: "idHealth")
             cell.textLabel?.text = healthDataLabels[indexPath.item]
             cell.detailTextLabel?.text = healthDataValues[indexPath.item]
+            cells.append(cell)
             return cell
         }
     }

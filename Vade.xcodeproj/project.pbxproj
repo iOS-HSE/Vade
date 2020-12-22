@@ -10,7 +10,14 @@
 		0E2B6CC5255EC14800AD2816 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */; };
 		2819579AD6459ABF1CDAEB87 /* Pods_Vade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48EB97A844021E23046DB5C /* Pods_Vade.framework */; };
 		41240D06256A6B6C008C597F /* LBTASignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41240D05256A6B6C008C597F /* LBTASignUpController.swift */; };
+		412D8942258DCA520028A2E7 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D8941258DCA520028A2E7 /* FormatDisplay.swift */; };
+		412D8948258DCACD0028A2E7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D8947258DCACD0028A2E7 /* LocationManager.swift */; };
+		412D8957258DEFEF0028A2E7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412D8956258DEFEF0028A2E7 /* HealthKit.framework */; };
+		412D8982258E122A0028A2E7 /* CoreModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 412D8980258E122A0028A2E7 /* CoreModels.xcdatamodeld */; };
+		412D8987258E12740028A2E7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D8986258E12740028A2E7 /* CoreDataStack.swift */; };
+		412D898C258E13570028A2E7 /* MulticolorPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D898B258E13570028A2E7 /* MulticolorPolyline.swift */; };
 		412FB49B2559D542006726CC /* FirestoreUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FB49A2559D542006726CC /* FirestoreUser.swift */; };
+		41426F57258A88DD00988BC1 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41426F56258A88DD00988BC1 /* TrainViewController.swift */; };
 		41581E982562F78F009DC27B /* PickerCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581E972562F78F009DC27B /* PickerCustomCell.swift */; };
 		41581E9D256309D3009DC27B /* DatePickerCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581E9C256309D3009DC27B /* DatePickerCustomCell.swift */; };
 		41581EA225632C70009DC27B /* CustomDetailCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41581EA125632C70009DC27B /* CustomDetailCellBuilder.swift */; };
@@ -39,6 +46,10 @@
 		4176335A25613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176335925613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift */; };
 		4176335F25613F5A00C0CBF3 /* CustomDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176335E25613F5A00C0CBF3 /* CustomDetailCell.swift */; };
 		417633642561433300C0CBF3 /* CellBuildersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417633632561433300C0CBF3 /* CellBuildersManager.swift */; };
+		419270F2257932CE00A79769 /* AuthentificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419270F1257932CE00A79769 /* AuthentificationManager.swift */; };
+		41A86116258D35B0004CA8D5 /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A86115258D35B0004CA8D5 /* RunDetailsViewController.swift */; };
+		41A86123258D48CD004CA8D5 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A86122258D48CD004CA8D5 /* UnitExtensions.swift */; };
+		41E76C632579370F0065F2FE /* VadeUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E76C622579370F0065F2FE /* VadeUserManager.swift */; };
 		B90BF2EA49FCDE0EC81C60EE /* Pods_Vade_VadeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84C49291F5ACD0BE18700AD /* Pods_Vade_VadeUITests.framework */; };
 		F8BDD5E56969D823ECB948CA /* Pods_VadeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C0DAE742028C010F9F2EB7 /* Pods_VadeTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +74,15 @@
 /* Begin PBXFileReference section */
 		0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		41240D05256A6B6C008C597F /* LBTASignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTASignUpController.swift; sourceTree = "<group>"; };
+		412D8941258DCA520028A2E7 /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		412D8947258DCACD0028A2E7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		412D8955258DEFEF0028A2E7 /* Vade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vade.entitlements; sourceTree = "<group>"; };
+		412D8956258DEFEF0028A2E7 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		412D8981258E122A0028A2E7 /* CoreModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModels.xcdatamodel; sourceTree = "<group>"; };
+		412D8986258E12740028A2E7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		412D898B258E13570028A2E7 /* MulticolorPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticolorPolyline.swift; sourceTree = "<group>"; };
 		412FB49A2559D542006726CC /* FirestoreUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUser.swift; sourceTree = "<group>"; };
+		41426F56258A88DD00988BC1 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
 		41581E972562F78F009DC27B /* PickerCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerCustomCell.swift; sourceTree = "<group>"; };
 		41581E9C256309D3009DC27B /* DatePickerCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCustomCell.swift; sourceTree = "<group>"; };
 		41581EA125632C70009DC27B /* CustomDetailCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDetailCellBuilder.swift; sourceTree = "<group>"; };
@@ -92,12 +111,16 @@
 		4159B97F25287E910028D4BB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4159B984252897EE0028D4BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4159B9B72529E0D90028D4BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4159B9E7252A3C8D0028D4BB /* data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data; sourceTree = SOURCE_ROOT; };
+		4159B9E7252A3C8D0028D4BB /* data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = data; path = Vade/data; sourceTree = SOURCE_ROOT; };
 		4176334C2561340200C0CBF3 /* PickerTableCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableCellBuilder.swift; sourceTree = "<group>"; };
 		41763351256134D200C0CBF3 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		4176335925613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableCellBuilder.swift; sourceTree = "<group>"; };
 		4176335E25613F5A00C0CBF3 /* CustomDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDetailCell.swift; sourceTree = "<group>"; };
 		417633632561433300C0CBF3 /* CellBuildersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBuildersManager.swift; sourceTree = "<group>"; };
+		419270F1257932CE00A79769 /* AuthentificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationManager.swift; sourceTree = "<group>"; };
+		41A86115258D35B0004CA8D5 /* RunDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
+		41A86122258D48CD004CA8D5 /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
+		41E76C622579370F0065F2FE /* VadeUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VadeUserManager.swift; sourceTree = "<group>"; };
 		6BBB39769BC1ED450D089089 /* Pods-Vade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade.debug.xcconfig"; path = "Target Support Files/Pods-Vade/Pods-Vade.debug.xcconfig"; sourceTree = "<group>"; };
 		85DB99FA57D2509B955C0A78 /* Pods-Vade-VadeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade-VadeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A34C20E44599B1DD401E2BE4 /* Pods-Vade-VadeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vade-VadeUITests.release.xcconfig"; path = "Target Support Files/Pods-Vade-VadeUITests/Pods-Vade-VadeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2819579AD6459ABF1CDAEB87 /* Pods_Vade.framework in Frameworks */,
+				412D8957258DEFEF0028A2E7 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,11 +174,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		412D8940258DCA260028A2E7 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				412D8941258DCA520028A2E7 /* FormatDisplay.swift */,
+				412D898B258E13570028A2E7 /* MulticolorPolyline.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		412D8946258DCABD0028A2E7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				412D8947258DCACD0028A2E7 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		412FB4962559D525006726CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				412FB49A2559D542006726CC /* FirestoreUser.swift */,
 				41581ED525645096009DC27B /* VadeUser.swift */,
+				41E76C622579370F0065F2FE /* VadeUserManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				41581EB825641FC6009DC27B /* Extensions.swift */,
+				41A86122258D48CD004CA8D5 /* UnitExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,15 +235,16 @@
 		4159B928252876190028D4BB /* Vade */ = {
 			isa = PBXGroup;
 			children = (
-				41581EB725641F7E009DC27B /* Extensions */,
-				412FB4962559D525006726CC /* Models */,
-				4159B97E25287E750028D4BB /* Helpers */,
+				412D8955258DEFEF0028A2E7 /* Vade.entitlements */,
+				41A8610E258D2CB4004CA8D5 /* CoreData */,
 				4159B95C252876FA0028D4BB /* View Controllers */,
-				4159B929252876190028D4BB /* AppDelegate.swift */,
-				4159B92B252876190028D4BB /* SceneDelegate.swift */,
-				4159B92F252876190028D4BB /* Main.storyboard */,
+				4159B97E25287E750028D4BB /* Helpers */,
+				41581EB725641F7E009DC27B /* Extensions */,
+				419270E525791FDE00A79769 /* Storyboards */,
+				412FB4962559D525006726CC /* Models */,
+				419270E7257921B800A79769 /* Resources */,
+				419270E625791FE900A79769 /* DefaultDelegates */,
 				4159B9322528761A0028D4BB /* Assets.xcassets */,
-				4159B9342528761A0028D4BB /* LaunchScreen.storyboard */,
 				4159B984252897EE0028D4BB /* GoogleService-Info.plist */,
 				4159B9372528761A0028D4BB /* Info.plist */,
 				4159B9E7252A3C8D0028D4BB /* data */,
@@ -237,6 +281,8 @@
 				41581EC525642D82009DC27B /* MainTabBarViewController.swift */,
 				41581ED025643506009DC27B /* ProfileViewController.swift */,
 				41240D05256A6B6C008C597F /* LBTASignUpController.swift */,
+				41426F56258A88DD00988BC1 /* TrainViewController.swift */,
+				41A86115258D35B0004CA8D5 /* RunDetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -244,6 +290,8 @@
 		4159B97E25287E750028D4BB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				412D8946258DCABD0028A2E7 /* Managers */,
+				412D8940258DCA260028A2E7 /* Formatters */,
 				4176334B256133D400C0CBF3 /* Builders */,
 				4159B97F25287E910028D4BB /* Utilities.swift */,
 				4159B9B72529E0D90028D4BB /* Constants.swift */,
@@ -251,6 +299,7 @@
 				41581E972562F78F009DC27B /* PickerCustomCell.swift */,
 				41581E9C256309D3009DC27B /* DatePickerCustomCell.swift */,
 				41581EC025642BA0009DC27B /* Transitor.swift */,
+				419270F1257932CE00A79769 /* AuthentificationManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -267,9 +316,44 @@
 			path = Builders;
 			sourceTree = "<group>";
 		};
+		419270E525791FDE00A79769 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4159B92F252876190028D4BB /* Main.storyboard */,
+				4159B9342528761A0028D4BB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		419270E625791FE900A79769 /* DefaultDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				4159B929252876190028D4BB /* AppDelegate.swift */,
+				4159B92B252876190028D4BB /* SceneDelegate.swift */,
+			);
+			path = DefaultDelegates;
+			sourceTree = "<group>";
+		};
+		419270E7257921B800A79769 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		41A8610E258D2CB4004CA8D5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				412D8980258E122A0028A2E7 /* CoreModels.xcdatamodeld */,
+				412D8986258E12740028A2E7 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		F2F7EC597759905939255222 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				412D8956258DEFEF0028A2E7 /* HealthKit.framework */,
 				F48EB97A844021E23046DB5C /* Pods_Vade.framework */,
 				D84C49291F5ACD0BE18700AD /* Pods_Vade_VadeUITests.framework */,
 				D6C0DAE742028C010F9F2EB7 /* Pods_VadeTests.framework */,
@@ -554,9 +638,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				41581E9D256309D3009DC27B /* DatePickerCustomCell.swift in Sources */,
+				41A86123258D48CD004CA8D5 /* UnitExtensions.swift in Sources */,
 				4159B97A25287D3C0028D4BB /* SignUpViewController.swift in Sources */,
 				4176334D2561340200C0CBF3 /* PickerTableCellBuilder.swift in Sources */,
+				412D8948258DCACD0028A2E7 /* LocationManager.swift in Sources */,
 				41581EC625642D82009DC27B /* MainTabBarViewController.swift in Sources */,
+				412D8987258E12740028A2E7 /* CoreDataStack.swift in Sources */,
+				419270F2257932CE00A79769 /* AuthentificationManager.swift in Sources */,
 				412FB49B2559D542006726CC /* FirestoreUser.swift in Sources */,
 				41581EC125642BA0009DC27B /* Transitor.swift in Sources */,
 				4176335A25613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift in Sources */,
@@ -568,12 +656,18 @@
 				4159B97025287D130028D4BB /* LoginViewController.swift in Sources */,
 				4159B92E252876190028D4BB /* AuthMethodsViewController.swift in Sources */,
 				41581E982562F78F009DC27B /* PickerCustomCell.swift in Sources */,
+				412D898C258E13570028A2E7 /* MulticolorPolyline.swift in Sources */,
 				4159B92A252876190028D4BB /* AppDelegate.swift in Sources */,
 				4176335F25613F5A00C0CBF3 /* CustomDetailCell.swift in Sources */,
 				0E2B6CC5255EC14800AD2816 /* OnboardingViewController.swift in Sources */,
 				4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */,
+				41A86116258D35B0004CA8D5 /* RunDetailsViewController.swift in Sources */,
+				412D8942258DCA520028A2E7 /* FormatDisplay.swift in Sources */,
+				41E76C632579370F0065F2FE /* VadeUserManager.swift in Sources */,
 				41581EB925641FC6009DC27B /* Extensions.swift in Sources */,
 				41581EA225632C70009DC27B /* CustomDetailCellBuilder.swift in Sources */,
+				41426F57258A88DD00988BC1 /* TrainViewController.swift in Sources */,
+				412D8982258E122A0028A2E7 /* CoreModels.xcdatamodeld in Sources */,
 				41581ED125643506009DC27B /* ProfileViewController.swift in Sources */,
 				417633642561433300C0CBF3 /* CellBuildersManager.swift in Sources */,
 				4159B9B82529E0D90028D4BB /* Constants.swift in Sources */,
@@ -753,6 +847,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Vade/Vade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49B53529R9;
 				INFOPLIST_FILE = Vade/Info.plist;
@@ -773,6 +868,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Vade/Vade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49B53529R9;
 				INFOPLIST_FILE = Vade/Info.plist;
@@ -911,6 +1007,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		412D8980258E122A0028A2E7 /* CoreModels.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				412D8981258E122A0028A2E7 /* CoreModels.xcdatamodel */,
+			);
+			currentVersion = 412D8981258E122A0028A2E7 /* CoreModels.xcdatamodel */;
+			path = CoreModels.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4159B91E252876190028D4BB /* Project object */;
 }

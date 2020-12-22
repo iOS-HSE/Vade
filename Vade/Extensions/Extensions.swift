@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 extension UIViewController {
-    func showAlert(title: String, message: String) {
+    func showAlert(title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
              print("Ok button tapped")
@@ -40,4 +40,26 @@ extension UITextField {
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
   }
+}
+
+fileprivate var aView: UIView?
+
+extension UIViewController {
+    
+    func showSpinner() {
+        aView = UIView(frame: (self.view.window?.subviews[0].bounds)!)
+
+        aView?.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        
+        let ai = UIActivityIndicatorView(style: .medium)
+        ai.center = aView!.center
+        ai.startAnimating()
+        aView?.addSubview(ai)
+        self.view.window?.subviews[0].addSubview(aView!)
+    }
+    
+    func removeSpinner() {
+        aView?.removeFromSuperview()
+        aView = nil
+    }
 }

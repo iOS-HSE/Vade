@@ -52,18 +52,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let weight = document.get("weight") as! String
                 let growth = document.get("growth") as! String
 
-                VadeUser.shared.setName(name: name)
+                VadeUser.shared.name = name
                 UserDefaults.standard.setValue(name, forKey: "userName")
-                VadeUser.shared.setEmail(email: email)
-                VadeUser.shared.setFirestoreID(id: id)
+                VadeUser.shared.email = email
+                VadeUser.shared.firestoreID = id
                 UserDefaults.standard.setValue(name, forKey: "userID")
-                VadeUser.shared.setBirthday(date: birthday)
+                VadeUser.shared.birthday = birthday
                 UserDefaults.standard.setValue(birthday, forKey: "userBirthday")
-                VadeUser.shared.setSex(sex: sex)
+                VadeUser.shared.sex = sex
                 UserDefaults.standard.setValue(sex, forKey: "userSex")
-                VadeUser.shared.setWeight(weight: weight)
+                VadeUser.shared.weight = weight
                 UserDefaults.standard.setValue(weight, forKey: "userWeight")
-                VadeUser.shared.setGrowth(growth: growth)
+                VadeUser.shared.growth = growth
                 UserDefaults.standard.setValue(growth, forKey: "userGrowth")
                 
                 Transitor.transitionToTabBarVC(view: self.view, storyboard: self.storyboard)
