@@ -41,6 +41,7 @@
 		4159B985252897EE0028D4BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4159B984252897EE0028D4BB /* GoogleService-Info.plist */; };
 		4159B9B82529E0D90028D4BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159B9B72529E0D90028D4BB /* Constants.swift */; };
 		4159B9E8252A3C8D0028D4BB /* data in Resources */ = {isa = PBXBuildFile; fileRef = 4159B9E7252A3C8D0028D4BB /* data */; };
+		416EDFF825C9AAFB00E3FD95 /* TestTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EDFF725C9AAFB00E3FD95 /* TestTrainViewController.swift */; };
 		4176334D2561340200C0CBF3 /* PickerTableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176334C2561340200C0CBF3 /* PickerTableCellBuilder.swift */; };
 		41763352256134D200C0CBF3 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41763351256134D200C0CBF3 /* Builder.swift */; };
 		4176335A25613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176335925613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift */; };
@@ -112,6 +113,7 @@
 		4159B984252897EE0028D4BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4159B9B72529E0D90028D4BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4159B9E7252A3C8D0028D4BB /* data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = data; path = Vade/data; sourceTree = SOURCE_ROOT; };
+		416EDFF725C9AAFB00E3FD95 /* TestTrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTrainViewController.swift; sourceTree = "<group>"; };
 		4176334C2561340200C0CBF3 /* PickerTableCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableCellBuilder.swift; sourceTree = "<group>"; };
 		41763351256134D200C0CBF3 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		4176335925613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableCellBuilder.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				41240D05256A6B6C008C597F /* LBTASignUpController.swift */,
 				41426F56258A88DD00988BC1 /* TrainViewController.swift */,
 				41A86115258D35B0004CA8D5 /* RunDetailsViewController.swift */,
+				416EDFF725C9AAFB00E3FD95 /* TestTrainViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				412D898C258E13570028A2E7 /* MulticolorPolyline.swift in Sources */,
 				4159B92A252876190028D4BB /* AppDelegate.swift in Sources */,
 				4176335F25613F5A00C0CBF3 /* CustomDetailCell.swift in Sources */,
+				416EDFF825C9AAFB00E3FD95 /* TestTrainViewController.swift in Sources */,
 				0E2B6CC5255EC14800AD2816 /* OnboardingViewController.swift in Sources */,
 				4159B92C252876190028D4BB /* SceneDelegate.swift in Sources */,
 				41A86116258D35B0004CA8D5 /* RunDetailsViewController.swift in Sources */,
