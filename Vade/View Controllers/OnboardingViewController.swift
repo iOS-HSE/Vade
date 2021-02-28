@@ -9,79 +9,123 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
 
-    @IBOutlet var holderView: UIView!
+    @IBOutlet weak var contentView: UIView!
+    let dataSource = ["Welcome", "Set your route", "Train with your friends", "Choose your workout"]
+    var currentViewControllerIndex = 0
     
-    let scrollView = UIScrollView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configurePageViewController()
     }
     
     override func viewDidLayoutSubviews() {
-        configurescrollView()
-        //super.viewDidLayoutSubviews()
         if !OnboardingManager.shared.isNewUser(){
             Transitor.transitionToAuthNavigationVC(view: self.view, storyboard: self.storyboard)
         }
     }
     
-    private func configurescrollView() {
-         // set up scrollview
-        scrollView.frame = holderView.bounds
+    func configurePageViewController(){
         
-        let titles = ["Welcome", "Set your route", "Train with your friends", "Choose your workout"]
-        for x in 0..<4 {
-            let pageView = UIView(frame: CGRect(x:CGFloat(x) * (holderView.frame.size.width), y:0, width: holderView.frame.size.width, height: holderView.frame.size.height))
-            pageView.accessibilityIdentifier = "OnboardView_\(x)"
-            
-            // titile, image and button
-            let label = UILabel(frame: CGRect(x: 10, y: 10, width: pageView.frame.size.width-20, height: 120))
-            let imageView = UIImageView(frame: CGRect(x: 10, y: 10+120+10, width: pageView.frame.size.width-20, height: pageView.frame.size.height - 60 - 130 - 15))
-            let button = UIButton(frame: CGRect(x: 10, y: pageView.frame.size.height-60, width:pageView.frame.size.width-20, height: 50))
-            
-            label.textAlignment = .center
-            label.font = UIFont(name: "Helvetica-Bold", size: 32)
-            label.text = titles[x]
-            pageView.addSubview(label)
-            
-            imageView.contentMode = .scaleAspectFit
-            imageView.image = UIImage(named: "onboarding_\(x+1)")
-            pageView.addSubview(imageView)
-            
-            button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = .black
-            button.layer.cornerRadius = 25.0
-            button.setTitle("Continue", for: .normal)
-            if x == 3 {
-                button.setTitle("Get Started", for: .normal)
-            }
-            button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
-            button.tag = x+1
-            pageView.addSubview(button)
-            
-            scrollView.addSubview(pageView)
-            
-        }
-        
-        holderView.addSubview(scrollView)
-        scrollView.contentSize = CGSize(width: holderView.frame.size.width*3, height: 0)
-        scrollView.isPagingEnabled = true
-    }
-    
-    @objc func didTapButton(_ button: UIButton) {
-        guard button.tag < 4 else {
-            // dismiss
-            OnboardingManager.shared.setIsNewUser(value: false)
-            dismiss(animated: true, completion: nil)
-            Transitor.transitionToAuthNavigationVC(view: self.view, storyboard: self.storyboard)
+        guard let pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: CustomPageViewController.self)) as? CustomPageViewController else {
             return
         }
-        // scroll to next page
-        scrollView.setContentOffset(CGPoint(x: holderView.frame.size.width * CGFloat(button.tag), y: 0), animated: true)
+        
+        pageViewController.dataSource = self
+        pageViewController.delegate = self
+        
+        addChild(pageViewController)
+        pageViewController.didMove(toParent: self)
+        
+        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        contentView.addSubview(pageViewController.view)
+        let views: [String: Any] = ["pageView": pageViewController.view]
+        
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[pageView]-0-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
+        
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[pageView]-0-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
+        
+        guard let startingViewController = detailViewControllerAt(index: currentViewControllerIndex) else {
+             return
+        }
+        
+        pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true)
+        
+        
     }
 
+    func detailViewControllerAt(index: Int) -> DataViewController? {
+        
+        if index >= dataSource.count || dataSource.count == 0 {
+            return nil
+        }
+        
+        guard let dataViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: DataViewController.self)) as? DataViewController else {
+            return nil
+        }
+        
+        dataViewController.index = index
+        //adding text for label
+        dataViewController.displayText = dataSource[index]
+        dataViewController.imageName = "onboarding_\(index + 1)"
+        dataViewController.buttonName = "Start"
+        
+        return dataViewController
+    }
+    
+    
+    
 }
+
+extension OnboardingViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
+        let dataViewController = viewController as? DataViewController
+        
+        guard var currentIndex = dataViewController?.index else {
+            return nil
+        }
+        
+        currentViewControllerIndex = currentIndex
+        
+        if currentIndex == 0 {
+            return nil
+        }
+        
+        currentIndex -= 1
+        
+        return detailViewControllerAt(index: currentIndex)
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        let dataViewController = viewController as? DataViewController
+        
+        guard var currentIndex = dataViewController?.index else {
+            return nil
+        }
+        
+        if currentIndex == dataSource.count {
+            return nil
+        }
+        
+        currentIndex += 1
+        
+        currentViewControllerIndex = currentIndex
+        
+        return detailViewControllerAt(index: currentIndex)
+    }
+    
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return currentViewControllerIndex
+    }
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return dataSource.count
+    }
+}
+
 
 class OnboardingManager {
     
@@ -90,15 +134,10 @@ class OnboardingManager {
     private init() {}
     
     func isNewUser() -> Bool {
-        
-        guard UserDefaults.standard.object(forKey: "isNewUser") != nil else {
-            return true
-        }
-        
-        return UserDefaults.standard.bool(forKey: "isNewUser")
+        return !UserDefaults.standard.bool(forKey: "isNewUser")
     }
     
-    func setIsNewUser(value: Bool) {
-        UserDefaults.standard.set(value, forKey: "isNewUser")
+    func setIsNotNewUser() {
+        UserDefaults.standard.set(true, forKey: "isNewUser")
     }
 }

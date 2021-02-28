@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E2B6CC5255EC14800AD2816 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */; };
+		0E5F853C25E92E8500836E67 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5F853B25E92E8500836E67 /* DataViewController.swift */; };
+		0E7F232825E9311D00406581 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F232725E9311D00406581 /* CustomPageViewController.swift */; };
 		2819579AD6459ABF1CDAEB87 /* Pods_Vade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48EB97A844021E23046DB5C /* Pods_Vade.framework */; };
 		41240D06256A6B6C008C597F /* LBTASignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41240D05256A6B6C008C597F /* LBTASignUpController.swift */; };
 		412FB49B2559D542006726CC /* FirestoreUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412FB49A2559D542006726CC /* FirestoreUser.swift */; };
@@ -62,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		0E2B6CC4255EC14800AD2816 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		0E5F853B25E92E8500836E67 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		0E7F232725E9311D00406581 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		41240D05256A6B6C008C597F /* LBTASignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTASignUpController.swift; sourceTree = "<group>"; };
 		412FB49A2559D542006726CC /* FirestoreUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUser.swift; sourceTree = "<group>"; };
 		41581E972562F78F009DC27B /* PickerCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerCustomCell.swift; sourceTree = "<group>"; };
@@ -236,7 +240,9 @@
 				4159B97925287D3C0028D4BB /* SignUpViewController.swift */,
 				41581EC525642D82009DC27B /* MainTabBarViewController.swift */,
 				41581ED025643506009DC27B /* ProfileViewController.swift */,
+				0E7F232725E9311D00406581 /* CustomPageViewController.swift */,
 				41240D05256A6B6C008C597F /* LBTASignUpController.swift */,
+				0E5F853B25E92E8500836E67 /* DataViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -555,11 +561,13 @@
 			files = (
 				41581E9D256309D3009DC27B /* DatePickerCustomCell.swift in Sources */,
 				4159B97A25287D3C0028D4BB /* SignUpViewController.swift in Sources */,
+				0E7F232825E9311D00406581 /* CustomPageViewController.swift in Sources */,
 				4176334D2561340200C0CBF3 /* PickerTableCellBuilder.swift in Sources */,
 				41581EC625642D82009DC27B /* MainTabBarViewController.swift in Sources */,
 				412FB49B2559D542006726CC /* FirestoreUser.swift in Sources */,
 				41581EC125642BA0009DC27B /* Transitor.swift in Sources */,
 				4176335A25613E1C00C0CBF3 /* DatePickerTableCellBuilder.swift in Sources */,
+				0E5F853C25E92E8500836E67 /* DataViewController.swift in Sources */,
 				4159B97525287D280028D4BB /* HealthDataViewController.swift in Sources */,
 				41763352256134D200C0CBF3 /* Builder.swift in Sources */,
 				4159B98025287E910028D4BB /* Utilities.swift in Sources */,
