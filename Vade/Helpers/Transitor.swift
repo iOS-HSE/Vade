@@ -17,7 +17,7 @@ class Transitor {
         
         // for animated transition
         let transition = CATransition()
-        transition.type = .moveIn
+        transition.type = .push
         transition.duration = 0.5
         view.window?.layer.add(transition, forKey: kCATransition)
         
@@ -30,8 +30,8 @@ class Transitor {
         
         // for animated transition
         let transition = CATransition()
-        transition.type = .fade
-        transition.duration = 1
+        transition.type = .push
+        transition.duration = 0.5
         view.window?.layer.add(transition, forKey: kCATransition)
         
         view.window?.rootViewController = tabBarVC
@@ -43,8 +43,8 @@ class Transitor {
         
         // for animated transition
         let transition = CATransition()
-        transition.type = .fade
-        transition.duration = 1
+        transition.type = .push
+        transition.duration = 0.5
         view.window?.layer.add(transition, forKey: kCATransition)
         
         view.window?.rootViewController = authNavigationVC

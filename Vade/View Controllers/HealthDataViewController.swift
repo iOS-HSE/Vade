@@ -25,6 +25,7 @@ class HealthDataViewController: UIViewController {
     
     // action for continue button
     @IBAction func continueTapped(_ sender: Any) {
+        self.showSpinner()
         print("CONTINUE TAPPED")
         let db = Firestore.firestore()
         
@@ -48,12 +49,13 @@ class HealthDataViewController: UIViewController {
             }
         }
         
-        VadeUser.shared.setBirthday(date: birthday)
-        VadeUser.shared.setSex(sex: sex)
-        VadeUser.shared.setWeight(weight: weight)
-        VadeUser.shared.setGrowth(growth: growth)
+        VadeUser.shared.birthday = birthday
+        VadeUser.shared.sex = sex
+        VadeUser.shared.weight = weight
+        VadeUser.shared.growth = growth
         
         // got to tab bar vc
+        self.removeSpinner()
         Transitor.transitionToTabBarVC(view: self.view, storyboard: self.storyboard)
     }
 }

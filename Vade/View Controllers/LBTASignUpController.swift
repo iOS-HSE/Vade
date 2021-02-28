@@ -58,6 +58,8 @@ class LBTASignUpController: LBTAFormController {
         lastNameTextField.autocorrectionType = .no
         emailTextField.autocorrectionType = .no
         passwordTextField.autocorrectionType = .no
+        
+        navigationItem.title = "Sign Up"
     }
     
     @objc fileprivate func handleCancel() {
@@ -88,9 +90,9 @@ class LBTASignUpController: LBTAFormController {
                     ])
                     
                     // set data for app vade user
-                    VadeUser.shared.setName(name: firstName + " " + lastName)
-                    VadeUser.shared.setEmail(email: email)
-                    VadeUser.shared.setFirestoreID(id: result!.user.uid)
+                    VadeUser.shared.name = firstName + " " + lastName
+                    VadeUser.shared.email = email
+                    VadeUser.shared.firestoreID = result!.user.uid
                     
                     Transitor.transitionToHealthDataVC(view: self.view, storyboard: self.storyboard, uid: result!.user.uid)
                 }

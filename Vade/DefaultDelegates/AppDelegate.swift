@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        
+        let locationManager = LocationManager.shared
+        locationManager.requestWhenInUseAuthorization()
+
         return true
     }
     

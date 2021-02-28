@@ -15,5 +15,6 @@ struct Constants
         static let tabBarVC = "TabBarVC"
         static let authMethodsVC = "AuthMethodsVC"
         static let authNavigationVC = "AuthNavigationVC"
+        static let runDetailsVC = "RunDetailsVC"
     }
 }
